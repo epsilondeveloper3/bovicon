@@ -6,9 +6,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="Chemlabs - Laboratory & Science Research HTML5 Template">
+  <meta name="description" content="Bovica - Laboratory & Pathology Diagnostics">
   <link href="assets/images/favicon/favicon.png" rel="icon">
-  <title>Chemlabs - Laboratory & Science Research HTML5 Template</title>
+  <title>Bovica - Laboratory & Pathology Diagnostics</title>
   <?php include 'includes/style.php'; ?>
 </head>
 
@@ -36,11 +36,11 @@
                   <p class="slide-desc">We are continually harnessing our medical expertise to build best test offering
                     while investing in technology to transform the delivery of health care.</p>
                   <div class="d-flex flex-wrap align-items-center">
-                    <a href="tests-book-visit.php" class="btn btn-white btn-xl mr-30">
+                    <a href="tests.php" class="btn btn-white btn-xl mr-30">
                       <i class="icon-arrow-right"></i>
                       <span>Book a Home Visit</span>
                     </a>
-                    <a href="tests-services.php" class="btn btn-white btn-outlined">
+                    <a href="tests.php" class="btn btn-white btn-outlined">
                       <span>Tests and Services</span>
                     </a>
                   </div>
@@ -59,11 +59,11 @@
                   <p class="slide-desc">We are continually harnessing our medical expertise to build best test offering
                     while investing in technology to transform the delivery of health care.</p>
                   <div class="d-flex flex-wrap align-items-center">
-                    <a href="tests-book-visit.php" class="btn btn-white btn-xl mr-30">
+                    <a href="tests.php" class="btn btn-white btn-xl mr-30">
                       <i class="icon-arrow-right"></i>
                       <span>Book a Home Visit</span>
                     </a>
-                    <a href="tests-services.php" class="btn btn-white btn-outlined">
+                    <a href="tests.php" class="btn btn-white btn-outlined">
                       <span>Tests and Services</span>
                     </a>
                   </div>
@@ -232,13 +232,13 @@
     <!-- ==========================
      Banner Layout 3
     =========================== -->
-    <section class="banner-layout3 bg-overlay bg-overlay-secondary-gradient pt-0 pb-130">
+    <section class="banner-layout3 bg-overlay bg-overlay-primary-gradient pt-0 pb-130">
       <div class="bg-img"><img src="assets/images/banners/6.jpg" alt="banner"></div>
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-7 col-xl-6 pt-130">
             <div class="heading-layout2 heading-light mb-60">
-              <h2 class="heading-subtitle color-primary">Your Health And Safety Is Important To Us</h2>
+              <h2 class="heading-subtitle color-secondary">Your Health And Safety Is Important To Us</h2>
               <h3 class="heading-title">Find Your Nearest Lab And Schedule An Appointment</h3>
             </div>
             <form class="contact-panel-form" id="contactForm">

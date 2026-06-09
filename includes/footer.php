@@ -90,7 +90,7 @@
                 </ul>
               </nav>
               <div class="mt-1">
-                <span>&copy; 2023 Chemlabs, All Rights Reserved. With Love by </span>
+                <span>&copy; 2026 Bovica, All Rights Reserved. With Love by </span>
                 <a href="http://themeforest.net/user/7oroof">7oroof.com</a>
               </div>
             </div><!-- /.col-lg-6 -->

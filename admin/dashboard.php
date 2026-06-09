@@ -38,7 +38,7 @@
                       <div class="dashboard-header-title">
                         <h5 class="mb-0">Dashboard</h5>
                         <p class="mb-0">
-                          Welcome to <span class="text-success">Bovicon Admin Panel</span>
+                          Welcome to <span class="text-success">Bovica Admin Panel</span>
                         </p>
                       </div>
                     </div>

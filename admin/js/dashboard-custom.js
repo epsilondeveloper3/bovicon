@@ -16,7 +16,7 @@ $(function () {
                 },
                 stacked: !0
             },
-            colors: ["#723B00", "#198754"],
+            colors: ["#005963", "#198754"],
             plotOptions: {
                 bar: {
                     borderRadius: [6],
@@ -74,7 +74,7 @@ $(function () {
                 offsetX: -20,
                 stacked: !0
             },
-            colors: ["#198754", "#723B00"],
+            colors: ["#198754", "#005963"],
             plotOptions: {
                 bar: {
                     horizontal: !1,
@@ -158,7 +158,7 @@ $(function () {
             legend: {
                 show: !1
             },
-            colors: ["#723B00", "#EAEFF4", "#198754"],
+            colors: ["#005963", "#EAEFF4", "#198754"],
             tooltip: {
                 theme: "dark",
                 fillSeriesColor: !1
@@ -197,7 +197,7 @@ $(function () {
                 endingShape: "rounded"
             }
         },
-        colors: ["#723B00", "#198754"],
+        colors: ["#005963", "#198754"],
         dataLabels: {
             enabled: !1
         },
@@ -336,7 +336,7 @@ $(function () {
     
     var t = {
             series: [44, 55, 41, 17, 15],
-            color: "#723B00",
+            color: "#005963",
             chart: {
                 type: "donut",
                 height: 300
@@ -544,7 +544,7 @@ $(function () {
                 enabled: !0
             }
         },
-        colors: ["#723B00"],
+        colors: ["#005963"],
         dataLabels: {
             enabled: !1
         },
@@ -590,7 +590,7 @@ $(function () {
                 top: 5
             }
         },
-        colors: ["#723B00", "#383663"],
+        colors: ["#005963", "#383663"],
         plotOptions: {
             bar: {
                 horizontal: !1,

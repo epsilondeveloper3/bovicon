@@ -6,9 +6,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="Chemlabs - Laboratory & Science Research HTML5 Template">
+  <meta name="description" content="Bovica - Pathology Tests & Services">
   <link href="assets/images/favicon/favicon.png" rel="icon">
-  <title>Chemlabs - Laboratory & Science Research HTML5 Template</title>
+  <title>Bovica - Pathology Tests & Services</title>
   <?php include 'includes/style.php'; ?>
 </head>
 

@@ -1,7 +1,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Title -->
-    <title>SoniBook Admin Panel</title>
+    <title>Bovica Admin</title>
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
     <!-- Plugins File -->
