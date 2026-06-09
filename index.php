@@ -1,3 +1,4 @@
+<?php include_once 'admin/include/config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -172,37 +173,39 @@
           <div class="col-12">
             <div class="slick-carousel"
               data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "arrows": false, "dots": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
-              <!-- service item #1 -->
+              <?php
+              $servQuery = mysqli_query($con, "SELECT * FROM services ORDER BY id ASC");
+              if ($servQuery && mysqli_num_rows($servQuery) > 0) {
+                  while ($row = mysqli_fetch_assoc($servQuery)) {
+              ?>
+              <!-- service item -->
               <div class="service-item">
                 <div class="service-body">
                   <div class="d-flex align-items-center justify-content-between">
                     <h4 class="service-title">
-                      <a href="tests-single-test.php">General Diagnostic Tests</a>
+                      <a href="tests.php"><?php echo htmlspecialchars($row['title']); ?></a>
                     </h4>
                     <div class="service-icon">
-                      <i class="icon-microscope"></i>
+                      <i class="<?php echo htmlspecialchars($row['icon']); ?>"></i>
                     </div>
                   </div>
-                  <p class="service-desc">We are leader in ensuring exceptional quality testing in our facilities,
-                    driven
-                    by a passion to ensure you have critical information about your health give you access to
-                    diagnostic...
-                  </p>
+                  <p class="service-desc"><?php echo htmlspecialchars($row['description']); ?></p>
                   <ul class="features-list-layout3 list-unstyled">
+                    <?php
+                    $feats = explode("\n", str_replace("\r", "", $row['features']));
+                    foreach ($feats as $f) {
+                        if (trim($f) !== '') {
+                    ?>
                     <li class="feature-item">
                       <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Gastrointestinal Health</h4>
+                      <h4 class="feature-title mb-0"><?php echo htmlspecialchars(trim($f)); ?></h4>
                     </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Immunological Disorders</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Cardiovascular Health</h4>
-                    </li>
+                    <?php
+                        }
+                    }
+                    ?>
                   </ul>
-                  <a href="tests-single-test.php" class="btn btn-secondary">
+                  <a href="tests.php" class="btn btn-secondary">
                     <i class="icon-arrow-right"></i> <span>Explore More</span>
                   </a>
                 </div><!-- /.service-body -->
@@ -210,189 +213,12 @@
                   <span class="hexagon-clippath"></span><span class="hexagon-clippath2"></span>
                 </div>
               </div><!-- /.service-item -->
-              <!-- service item #2 -->
-              <div class="service-item">
-                <div class="service-body">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h4 class="service-title">
-                      <a href="tests-single-test.php">Specialized Genetic Testing</a>
-                    </h4>
-                    <div class="service-icon">
-                      <i class="icon-dna-structure"></i>
-                    </div>
-                  </div>
-                  <p class="service-desc">Genetic testing can be useful at different stages of life, like discovering
-                    that
-                    a family member has a condition that can be passed down or struggling to find treatment....
-                  </p>
-                  <ul class="features-list-layout3 list-unstyled">
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Reproductive Health</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Genetic Disorders</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Hereditary Cancer</h4>
-                    </li>
-                  </ul>
-                  <a href="tests-single-test.php" class="btn btn-secondary">
-                    <i class="icon-arrow-right"></i> <span>Explore More</span>
-                  </a>
-                </div><!-- /.service-body -->
-                <div class="service-shape">
-                  <span class="hexagon-clippath"></span><span class="hexagon-clippath2"></span>
-                </div>
-              </div><!-- /.service-item -->
-              <!-- service item #3 -->
-              <div class="service-item">
-                <div class="service-body">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h4 class="service-title">
-                      <a href="tests-single-test.php">Naturopathic Lab Testing</a>
-                    </h4>
-                    <div class="service-icon">
-                      <i class="icon-florence-flask"></i>
-                    </div>
-                  </div>
-                  <p class="service-desc">From hormone levels, to food reactions, to identifying environmental toxins,
-                    we
-                    provide you with objective information so you can map your path to health and wellness....
-                  </p>
-                  <ul class="features-list-layout3 list-unstyled">
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Salivary Hormone</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Food Sensitivity</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Inhalant Allergy</h4>
-                    </li>
-                  </ul>
-                  <a href="tests-single-test.php" class="btn btn-secondary">
-                    <i class="icon-arrow-right"></i> <span>Explore More</span>
-                  </a>
-                </div><!-- /.service-body -->
-                <div class="service-shape">
-                  <span class="hexagon-clippath"></span><span class="hexagon-clippath2"></span>
-                </div>
-              </div><!-- /.service-item -->
-              <!-- service item #4 -->
-              <div class="service-item">
-                <div class="service-body">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h4 class="service-title">
-                      <a href="tests-single-test.php">Food Sensitivity Testing</a>
-                    </h4>
-                    <div class="service-icon">
-                      <i class="icon-mortar"></i>
-                    </div>
-                  </div>
-                  <p class="service-desc">IgG food reactions can take hours or days to develop, making difficult to
-                    determine which food is responsible for the reaction without doing testing fast and specific way....
-                  </p>
-                  <ul class="features-list-layout3 list-unstyled">
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Stomach or abdominal pain</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Gastrointestinal distress</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Bloating / Indigestion</h4>
-                    </li>
-                  </ul>
-                  <a href="tests-single-test.php" class="btn btn-secondary">
-                    <i class="icon-arrow-right"></i> <span>Explore More</span>
-                  </a>
-                </div><!-- /.service-body -->
-                <div class="service-shape">
-                  <span class="hexagon-clippath"></span><span class="hexagon-clippath2"></span>
-                </div>
-              </div><!-- /.service-item -->
-              <!-- service item #5 -->
-              <div class="service-item">
-                <div class="service-body">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h4 class="service-title">
-                      <a href="tests-single-test.php">Genova Diagnostics Testing</a>
-                    </h4>
-                    <div class="service-icon">
-                      <i class="icon-atom"></i>
-                    </div>
-                  </div>
-                  <p class="service-desc">Genova Diagnostics is an internationally renowned lab committed to only the
-                    highest standards. Chronic diseases are complex, but with Genova's system-based testing....
-                  </p>
-                  <ul class="features-list-layout3 list-unstyled">
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Gastrointestinal/Immunology</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Nutritional / Endocrinology</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Genomics / Environmental</h4>
-                    </li>
-                  </ul>
-                  <a href="tests-single-test.php" class="btn btn-secondary">
-                    <i class="icon-arrow-right"></i> <span>Explore More</span>
-                  </a>
-                </div><!-- /.service-body -->
-                <div class="service-shape">
-                  <span class="hexagon-clippath"></span><span class="hexagon-clippath2"></span>
-                </div>
-              </div><!-- /.service-item -->
-              <!-- service item #6 -->
-              <div class="service-item">
-                <div class="service-body">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <h4 class="service-title">
-                      <a href="tests-single-test.php">Hormone Insights Testing</a>
-                    </h4>
-                    <div class="service-icon">
-                      <i class="icon-molecule2"></i>
-                    </div>
-                  </div>
-                  <p class="service-desc">Hormones are essential for the body to function optimally. Imbalances may
-                    result
-                    in many health conditions. Hormone Insights is a detailed urine analysis that measures....
-                  </p>
-                  <ul class="features-list-layout3 list-unstyled">
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Cortisol and cortisone metabolites</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Androgens and 17-ketosteroids</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Progesterone metabolites</h4>
-                    </li>
-                  </ul>
-                  <a href="tests-single-test.php" class="btn btn-secondary">
-                    <i class="icon-arrow-right"></i> <span>Explore More</span>
-                  </a>
-                </div><!-- /.service-body -->
-                <div class="service-shape">
-                  <span class="hexagon-clippath"></span><span class="hexagon-clippath2"></span>
-                </div>
-              </div><!-- /.service-item -->
+              <?php
+                  }
+              } else {
+                  echo '<p class="text-center w-100">No services found.</p>';
+              }
+              ?>
             </div><!-- /.carousel -->
           </div><!-- /.col-12 -->
         </div><!-- /.row -->
@@ -421,13 +247,16 @@
                   <div class="form-group">
                     <label for="service">Select Services</label>
                     <select id="service" class="form-control">
-                      <option value="Genetic Tests">Genetic Tests</option>
-                      <option value="General Diagnostic">General Diagnostic</option>
-                      <option value="Naturopathic Lab">Naturopathic Lab</option>
-                      <option value="Food Sensitivity">Food Sensitivity</option>
-                      <option value="Hormone Insights">Hormone Insights</option>
-                      <option value="Specialized Genetic">Specialized Genetic</option>
-                      <option value="Genova  Diagnostics">Genova Diagnostics</option>
+                      <?php
+                      $servSelect = mysqli_query($con, "SELECT title FROM services ORDER BY id ASC");
+                      if ($servSelect && mysqli_num_rows($servSelect) > 0) {
+                          while ($sRow = mysqli_fetch_assoc($servSelect)) {
+                              echo '<option value="' . htmlspecialchars($sRow['title']) . '">' . htmlspecialchars($sRow['title']) . '</option>';
+                          }
+                      } else {
+                          echo '<option value="">No services available</option>';
+                      }
+                      ?>
                     </select>
                   </div>
                 </div><!-- /.col-lg-6 -->
@@ -435,8 +264,18 @@
                   <div class="form-group">
                     <label for="location">Location</label>
                     <select id="location" class="form-control">
-                      <option value="1">California</option>
-                      <option value="2">NYC</option>
+                      <?php
+                      if (isset($con)) {
+                          $citySelect = mysqli_query($con, "SELECT name FROM cities WHERE status = 1 ORDER BY name ASC");
+                          if ($citySelect && mysqli_num_rows($citySelect) > 0) {
+                              while ($cRow = mysqli_fetch_assoc($citySelect)) {
+                                  echo '<option value="' . htmlspecialchars($cRow['name']) . '">' . htmlspecialchars($cRow['name']) . '</option>';
+                              }
+                          } else {
+                              echo '<option value="">No cities available</option>';
+                          }
+                      }
+                      ?>
                     </select>
                   </div>
                 </div><!-- /.col-lg-6 -->

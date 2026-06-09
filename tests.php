@@ -1,3 +1,4 @@
+<?php include_once 'admin/include/config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,35 +77,38 @@
           </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
         <div class="row">
-          <!-- service item #1 -->
-          <div class="col-sm-6 col-md-6 col-lg-4">
+          <?php
+          $servQuery = mysqli_query($con, "SELECT * FROM services ORDER BY id ASC");
+          if ($servQuery && mysqli_num_rows($servQuery) > 0) {
+              while ($row = mysqli_fetch_assoc($servQuery)) {
+          ?>
+          <!-- service item -->
+          <div class="col-sm-6 col-md-6 col-lg-4 mb-30">
             <div class="service-item">
               <div class="service-body">
                 <div class="d-flex align-items-center justify-content-between">
                   <h4 class="service-title">
-                    <a href="contact-us.php">General Diagnostic Tests</a>
+                    <a href="contact-us.php"><?php echo htmlspecialchars($row['title']); ?></a>
                   </h4>
                   <div class="service-icon">
-                    <i class="icon-microscope"></i>
+                    <i class="<?php echo htmlspecialchars($row['icon']); ?>"></i>
                   </div>
                 </div>
-                <p class="service-desc">We are leader in ensuring exceptional quality testing in our facilities, driven
-                  by a passion to ensure you have critical information about your health give you access to
-                  diagnostic...
-                </p>
+                <p class="service-desc"><?php echo htmlspecialchars($row['description']); ?></p>
                 <ul class="features-list-layout3 list-unstyled">
+                  <?php
+                  $feats = explode("\n", str_replace("\r", "", $row['features']));
+                  foreach ($feats as $f) {
+                      if (trim($f) !== '') {
+                  ?>
                   <li class="feature-item">
                     <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Gastrointestinal Health</h4>
+                    <h4 class="feature-title mb-0"><?php echo htmlspecialchars(trim($f)); ?></h4>
                   </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Immunological Disorders</h4>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Cardiovascular Health</h4>
-                  </li>
+                  <?php
+                      }
+                  }
+                  ?>
                 </ul>
                 <a href="contact-us.php" class="btn btn-secondary">
                   <i class="icon-arrow-right"></i> <span>Explore More</span>
@@ -115,196 +119,12 @@
               </div>
             </div><!-- /.service-item -->
           </div><!-- /.col-lg-4 -->
-          <!-- service item #2 -->
-          <div class="col-sm-6 col-md-6 col-lg-4">
-            <div class="service-item">
-              <div class="service-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h4 class="service-title">
-                    <a href="contact-us.php">Specialized Genetic Testing</a>
-                  </h4>
-                  <div class="service-icon">
-                    <i class="icon-dna-structure"></i>
-                  </div>
-                </div>
-                <p class="service-desc">Genetic testing can be useful at different stages of life, like discovering that
-                  a family member has a condition that can be passed down or struggling to find treatment....
-                </p>
-                <ul class="features-list-layout3 list-unstyled">
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Reproductive Health</h4>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Genetic Disorders</h4>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Hereditary Cancer</h4>
-                  </li>
-                </ul>
-                <a href="contact-us.php" class="btn btn-secondary">
-                  <i class="icon-arrow-right"></i> <span>Explore More</span>
-                </a>
-              </div><!-- /.service-body -->
-              <div class="service-shape">
-                <span class="hexagon-clippath"></span><span class="hexagon-clippath2"></span>
-              </div>
-            </div><!-- /.service-item -->
-          </div><!-- /.col-lg-4 -->
-          <!-- service item #3 -->
-          <div class="col-sm-6 col-md-6 col-lg-4">
-            <div class="service-item">
-              <div class="service-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h4 class="service-title">
-                    <a href="contact-us.php">Naturopathic Lab Testing</a>
-                  </h4>
-                  <div class="service-icon">
-                    <i class="icon-florence-flask"></i>
-                  </div>
-                </div>
-                <p class="service-desc">From hormone levels, to food reactions, to identifying environmental toxins, we
-                  provide you with objective information so you can map your path to health and wellness....
-                </p>
-                <ul class="features-list-layout3 list-unstyled">
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Salivary Hormone</h4>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Food Sensitivity</h4>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Inhalant Allergy</h4>
-                  </li>
-                </ul>
-                <a href="contact-us.php" class="btn btn-secondary">
-                  <i class="icon-arrow-right"></i> <span>Explore More</span>
-                </a>
-              </div><!-- /.service-body -->
-              <div class="service-shape">
-                <span class="hexagon-clippath"></span><span class="hexagon-clippath2"></span>
-              </div>
-            </div><!-- /.service-item -->
-          </div><!-- /.col-lg-4 -->
-          <!-- service item #4 -->
-          <div class="col-sm-6 col-md-6 col-lg-4">
-            <div class="service-item">
-              <div class="service-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h4 class="service-title">
-                    <a href="contact-us.php">Food Sensitivity Testing</a>
-                  </h4>
-                  <div class="service-icon">
-                    <i class="icon-mortar"></i>
-                  </div>
-                </div>
-                <p class="service-desc">IgG food reactions can take hours or days to develop, making difficult to
-                  determine which food is responsible for the reaction without doing testing fast and specific way....
-                </p>
-                <ul class="features-list-layout3 list-unstyled">
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Stomach or abdominal pain</h4>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Gastrointestinal distress</h4>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Bloating / Indigestion</h4>
-                  </li>
-                </ul>
-                <a href="contact-us.php" class="btn btn-secondary">
-                  <i class="icon-arrow-right"></i> <span>Explore More</span>
-                </a>
-              </div><!-- /.service-body -->
-              <div class="service-shape">
-                <span class="hexagon-clippath"></span><span class="hexagon-clippath2"></span>
-              </div>
-            </div><!-- /.service-item -->
-          </div><!-- /.col-lg-4 -->
-          <!-- service item #5 -->
-          <div class="col-sm-6 col-md-6 col-lg-4">
-            <div class="service-item">
-              <div class="service-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h4 class="service-title">
-                    <a href="contact-us.php">Genova Diagnostics Testing</a>
-                  </h4>
-                  <div class="service-icon">
-                    <i class="icon-atom"></i>
-                  </div>
-                </div>
-                <p class="service-desc">Genova Diagnostics is an internationally renowned lab committed to only the
-                  highest standards. Chronic diseases are complex, but with Genova's system-based testing....
-                </p>
-                <ul class="features-list-layout3 list-unstyled">
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Gastrointestinal/Immunology</h4>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Nutritional / Endocrinology</h4>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Genomics / Environmental</h4>
-                  </li>
-                </ul>
-                <a href="contact-us.php" class="btn btn-secondary">
-                  <i class="icon-arrow-right"></i> <span>Explore More</span>
-                </a>
-              </div><!-- /.service-body -->
-              <div class="service-shape">
-                <span class="hexagon-clippath"></span><span class="hexagon-clippath2"></span>
-              </div>
-            </div><!-- /.service-item -->
-          </div><!-- /.col-lg-4 -->
-          <!-- service item #6 -->
-          <div class="col-sm-6 col-md-6 col-lg-4">
-            <div class="service-item">
-              <div class="service-body">
-                <div class="d-flex align-items-center justify-content-between">
-                  <h4 class="service-title">
-                    <a href="contact-us.php">Hormone Insights Testing</a>
-                  </h4>
-                  <div class="service-icon">
-                    <i class="icon-molecule2"></i>
-                  </div>
-                </div>
-                <p class="service-desc">Hormones are essential for the body to function optimally. Imbalances may result
-                  in many health conditions. Hormone Insights is a detailed urine analysis that measures....
-                </p>
-                <ul class="features-list-layout3 list-unstyled">
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Cortisol and cortisone metabolites</h4>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Androgens and 17-ketosteroids</h4>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <h4 class="feature-title mb-0">Progesterone metabolites</h4>
-                  </li>
-                </ul>
-                <a href="contact-us.php" class="btn btn-secondary">
-                  <i class="icon-arrow-right"></i> <span>Explore More</span>
-                </a>
-              </div><!-- /.service-body -->
-              <div class="service-shape">
-                <span class="hexagon-clippath"></span><span class="hexagon-clippath2"></span>
-              </div>
-            </div><!-- /.service-item -->
-          </div><!-- /.col-lg-4 -->
+          <?php
+              }
+          } else {
+              echo '<p class="text-center w-100">No services found.</p>';
+          }
+          ?>
         </div><!-- /.row -->
         <div class="row">
           <div class="col-md-12 col-lg-6 offset-lg-3 text-center">
@@ -318,7 +138,245 @@
       </div><!-- /.container -->
     </section><!-- /.Services Layout 3 -->
 
-->
+    <!-- ========================
+        Diagnostic Tests Section
+    =========================== -->
+    <style>
+      /* Bovicon Dynamic Test Cards Styling */
+      .tests-section {
+        background-color: #f7f9fb;
+      }
+      .test-card {
+        background: #fff;
+        border: 1px solid #eaeaea;
+        border-radius: 8px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 390px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+      }
+      .test-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+        border-color: #004b93;
+      }
+      .test-title {
+        font-family: 'Lexend', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.4;
+        color: #1a1a1a;
+        min-height: 48px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      .test-info-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .test-info-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .info-blue {
+        color: #0d6efd;
+        background-color: #e7f1ff;
+      }
+      .info-red {
+        color: #dc3545;
+        background-color: #ffe8ea;
+      }
+      .info-orange {
+        color: #fd7e14;
+        background-color: #fff5eb;
+      }
+      .test-info-text {
+        font-size: 13.5px;
+        color: #555;
+        font-family: 'Roboto', sans-serif;
+      }
+      .accordion-trigger {
+        user-select: none;
+        border-radius: 4px;
+        padding: 4px 0;
+        transition: background 0.2s ease;
+      }
+      .accordion-trigger[aria-expanded="true"] .chevron-arrow {
+        transform: rotate(180deg);
+      }
+      .chevron-arrow {
+        transition: transform 0.2s ease;
+      }
+      .parameter-collapse-box {
+        width: 100%;
+      }
+      .parameter-list {
+        padding-left: 0;
+      }
+      .parameter-list li {
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: 6px;
+        font-size: 12.5px;
+        color: #666;
+        line-height: 1.4;
+      }
+      .parameter-list li::before {
+        content: "•";
+        color: #0d6efd;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        position: absolute;
+        left: 10px;
+      }
+      .test-card-footer {
+        margin-top: auto;
+        border-top: 1px solid #f2f2f2;
+        padding-top: 15px;
+        width: 100%;
+      }
+      .price-lbl {
+        font-family: 'Lexend', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #198754;
+      }
+      .price-val {
+        margin-left: 4px;
+      }
+      .btn-book-now {
+        background: #004b93;
+        color: #fff !important;
+        border-radius: 30px;
+        padding: 10px 20px;
+        width: 100%;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+        border: none;
+        font-family: 'Lexend', sans-serif;
+      }
+      .btn-book-now:hover {
+        background: #003366;
+        text-decoration: none;
+      }
+      .btn-book-now .btn-icon {
+        background: #fff;
+        color: #004b93;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 8px;
+        transition: all 0.3s ease;
+      }
+      .btn-book-now:hover .btn-icon {
+        transform: translateX(3px);
+      }
+    </style>
+
+    <section class="tests-section pt-100 pb-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-6 offset-xl-3">
+            <div class="heading-layout2 text-center mb-50">
+              <h2 class="heading-subtitle color-primary">Dynamic Pathology Packages</h2>
+              <h3 class="heading-title">Choose from Our Diagnostic Tests</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <?php
+          $testsQuery = mysqli_query($con, "SELECT * FROM tests ORDER BY id ASC");
+          if ($testsQuery && mysqli_num_rows($testsQuery) > 0) {
+              while ($test = mysqli_fetch_assoc($testsQuery)) {
+                  $test_id = $test['id'];
+          ?>
+          <div class="col-lg-3 col-md-6 col-sm-12 mb-30">
+            <div class="test-card">
+              <div class="test-title"><?php echo htmlspecialchars($test['name']); ?></div>
+              
+              <div class="test-info-row">
+                <div class="test-info-icon info-blue">
+                  <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="test-info-text"><?php echo htmlspecialchars($test['preparation']); ?></div>
+              </div>
+
+              <div class="test-info-row">
+                <div class="test-info-icon info-red">
+                  <i class="far fa-file-alt"></i>
+                </div>
+                <div class="test-info-text"><?php echo htmlspecialchars($test['frequency']); ?></div>
+              </div>
+
+              <div class="test-info-row accordion-trigger collapsed" data-toggle="collapse" data-target="#collapse_<?php echo $test_id; ?>" aria-expanded="false" style="cursor: pointer;">
+                <div class="test-info-icon info-orange">
+                  <i class="fas fa-clipboard-list"></i>
+                </div>
+                <div class="test-info-text font-weight-bold" style="color: #004b93; display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                  <span><?php echo $test['parameter_count']; ?> parameter(s) covered</span>
+                  <i class="fas fa-chevron-down chevron-arrow font-10 text-muted ml-2"></i>
+                </div>
+              </div>
+              
+              <div id="collapse_<?php echo $test_id; ?>" class="collapse parameter-collapse-box mb-3">
+                <div style="background-color: #f8f9fa; border-radius: 4px; padding: 12px; margin-top: 5px;">
+                  <ul class="parameter-list list-unstyled mb-0">
+                    <?php
+                    $params = explode("\n", str_replace("\r", "", $test['parameters']));
+                    foreach ($params as $p) {
+                        if (trim($p) !== '') {
+                            echo '<li>' . htmlspecialchars(trim($p)) . '</li>';
+                        }
+                    }
+                    ?>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="test-card-footer">
+                <div class="price-lbl mb-3">
+                  <span>₹</span><span class="price-val"><?php echo number_format($test['price'], 2); ?></span>
+                </div>
+                
+                <a href="contact-us.php?test=<?php echo urlencode($test['name']); ?>" class="btn-book-now">
+                  <span>Book Now</span>
+                  <span class="btn-icon">
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <?php
+              }
+          } else {
+              echo '<p class="text-center w-100">No diagnostic tests currently active.</p>';
+          }
+          ?>
+        </div>
+      </div>
+    </section>
 
     <?php include 'includes/footer.php'; ?>
 

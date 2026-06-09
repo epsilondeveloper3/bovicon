@@ -25,18 +25,23 @@
                       <span>Select City</span><span class="btn-shape"></span>
                     </button>
                     <ul class="miniPopup miniPopup-language list-unstyled" style="min-width: 150px; padding: 10px; max-height: 300px; overflow-y: auto;">
-                      <li><button style="width:100%; text-align:left;"><span>Ahmedabad</span></button></li>
-                      <li><button style="width:100%; text-align:left;"><span>Mumbai</span></button></li>
-                      <li><button style="width:100%; text-align:left;"><span>Delhi</span></button></li>
-                      <li><button style="width:100%; text-align:left;"><span>Bengaluru</span></button></li>
-                      <li><button style="width:100%; text-align:left;"><span>Pune</span></button></li>
-                      <li><button style="width:100%; text-align:left;"><span>Hyderabad</span></button></li>
-                      <li><button style="width:100%; text-align:left;"><span>Chennai</span></button></li>
-                      <li><button style="width:100%; text-align:left;"><span>Kolkata</span></button></li>
-                      <li><button style="width:100%; text-align:left;"><span>Jaipur</span></button></li>
-                      <li><button style="width:100%; text-align:left;"><span>Surat</span></button></li>
-                      <li><button style="width:100%; text-align:left;"><span>Lucknow</span></button></li>
-                      <li><button style="width:100%; text-align:left;"><span>Chandigarh</span></button></li>
+                      <?php
+                      if (isset($con)) {
+                          $cityQuery = mysqli_query($con, "SELECT name FROM cities WHERE status = 1 ORDER BY name ASC");
+                          if ($cityQuery && mysqli_num_rows($cityQuery) > 0) {
+                              while ($cRow = mysqli_fetch_assoc($cityQuery)) {
+                                  echo '<li><button style="width:100%; text-align:left;"><span>' . htmlspecialchars($cRow['name']) . '</span></button></li>';
+                              }
+                          } else {
+                              echo '<li><span class="text-muted p-2 font-12">No cities active</span></li>';
+                          }
+                      } else {
+                          $fallbackCities = ['Ahmedabad', 'Mumbai', 'Delhi', 'Bengaluru', 'Pune', 'Hyderabad', 'Chennai', 'Kolkata', 'Jaipur', 'Surat', 'Lucknow', 'Chandigarh'];
+                          foreach ($fallbackCities as $fc) {
+                              echo '<li><button style="width:100%; text-align:left;"><span>' . htmlspecialchars($fc) . '</span></button></li>';
+                          }
+                      }
+                      ?>
                     </ul><!-- /.miniPopup-language -->
                   </div>
                 </div>
