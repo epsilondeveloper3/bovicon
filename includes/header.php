@@ -1,0 +1,77 @@
+<!-- =========================
+        Header
+    =========================== -->
+    <header class="header header-layout1">
+      <div class="header-topbar">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="d-flex align-items-center justify-content-between">
+                <ul class="contact-list d-flex flex-wrap align-items-center list-unstyled mb-0">
+                  <li>
+                    <i class="icon-phone"></i><a href="tel:+5565454117">Emergency Line: (002) 01061245741</a>
+                  </li>
+                  <li>
+                    <i class="icon-location"></i><a href="#">Location: Brooklyn, New York</a>
+                  </li>
+                  <li>
+                    <i class="icon-clock"></i><a href="contact-us.html">Mon - Fri: 8:00 am - 7:00 pm</a>
+                  </li>
+                </ul><!-- /.contact-list -->
+                <div class="d-flex align-items-center">
+
+                  <div class="miniPopup-language-area">
+                    <button class="miniPopup-language-trigger" type="button">
+                      <span>Select City</span><span class="btn-shape"></span>
+                    </button>
+                    <ul class="miniPopup miniPopup-language list-unstyled" style="min-width: 150px; padding: 10px; max-height: 300px; overflow-y: auto;">
+                      <li><button style="width:100%; text-align:left;"><span>Ahmedabad</span></button></li>
+                      <li><button style="width:100%; text-align:left;"><span>Mumbai</span></button></li>
+                      <li><button style="width:100%; text-align:left;"><span>Delhi</span></button></li>
+                      <li><button style="width:100%; text-align:left;"><span>Bengaluru</span></button></li>
+                      <li><button style="width:100%; text-align:left;"><span>Pune</span></button></li>
+                      <li><button style="width:100%; text-align:left;"><span>Hyderabad</span></button></li>
+                      <li><button style="width:100%; text-align:left;"><span>Chennai</span></button></li>
+                      <li><button style="width:100%; text-align:left;"><span>Kolkata</span></button></li>
+                      <li><button style="width:100%; text-align:left;"><span>Jaipur</span></button></li>
+                      <li><button style="width:100%; text-align:left;"><span>Surat</span></button></li>
+                      <li><button style="width:100%; text-align:left;"><span>Lucknow</span></button></li>
+                      <li><button style="width:100%; text-align:left;"><span>Chandigarh</span></button></li>
+                    </ul><!-- /.miniPopup-language -->
+                  </div>
+                </div>
+              </div>
+            </div><!-- /.col-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.header-top -->
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="mainNavigation">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="index.php" class="nav-item-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="tests.php" class="nav-item-link">Tests</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact-us.php" class="nav-item-link">Contact Us</a>
+              </li>
+            </ul><!-- /.navbar-nav -->
+            <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
+          </div><!-- /.navbar-collapse -->
+          <div class="d-none d-xl-flex align-items-center position-relative ml-30">
+            <a href="tests.php" class="btn btn-primary btn-contact">
+              Book a Test
+            </a>
+          </div>
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
