@@ -22,7 +22,7 @@ $(function () {
                 show: !1
             }
         },
-        colors: ["#723B00", "#dc3545"],
+        colors: ["#005963", "#dc3545"],
         dataLabels: {
             enabled: !1
         },
@@ -189,7 +189,7 @@ $(function () {
                 enabled: !0
             }
         },
-        colors: ["#723B00"],
+        colors: ["#005963"],
         dataLabels: {
             enabled: !1
         },
@@ -235,7 +235,7 @@ $(function () {
                 top: 5
             }
         },
-        colors: ["#723B00", "#383663"],
+        colors: ["#005963", "#383663"],
         plotOptions: {
             bar: {
                 horizontal: !1,

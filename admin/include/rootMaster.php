@@ -1,6 +1,6 @@
 <?php
 define("HOST_URL", "http://localhost/Projects/bovicon/");
-define("WEB_TITLE", "Bovicon");
+define("WEB_TITLE", "Bovica");
 
 define("IMAGE_URL", HOST_URL . "assets/images/");
 define("PROFILE_URL", IMAGE_URL . "instructorprofile/");
