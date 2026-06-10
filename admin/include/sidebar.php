@@ -57,6 +57,24 @@ function activeClass($pages, $className = 'active')
               <span>Inquiries</span>
             </a>
           </li>
+
+          <li class="<?php echo trim(activeClass('testimonials.php')); ?>">
+            <a href="testimonials.php"><i class='bx bx-message-square-detail'></i>
+              <span>Testimonials</span>
+            </a>
+          </li>
+
+          <li class="<?php echo trim(activeClass('faqs.php')); ?>">
+            <a href="faqs.php"><i class='bx bx-help-circle'></i>
+              <span>FAQs</span>
+            </a>
+          </li>
+
+          <li class="<?php echo trim(activeClass('privacy-policy.php')); ?>">
+            <a href="privacy-policy.php"><i class='bx bx-shield-quarter'></i>
+              <span>Privacy Policy</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>

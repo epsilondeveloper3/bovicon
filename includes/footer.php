@@ -40,6 +40,8 @@
                     <li><a href="index.php#about">About Us</a></li>
                     <li><a href="tests.php">Tests</a></li>
                     <li><a href="contact-us.php">Contact Us</a></li>
+                    <li><a href="faq.php">FAQs</a></li>
+                    <li><a href="privacy-policy.php">Privacy Policy</a></li>
                   </ul>
                 </nav>
               </div><!-- /.footer-widget-content -->

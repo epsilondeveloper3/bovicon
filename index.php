@@ -427,6 +427,61 @@
     </section>
 
     <!-- ========================
+        Testimonials Section
+    =========================== -->
+    <section class="testimonials-section pt-100 pb-100 bg-gray-gradient" style="background: linear-gradient(180deg, #ffffff, #f8fafc);">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2 text-center mb-50">
+            <span class="heading-subtitle" style="font-family: 'Lexend', sans-serif; color: var(--color-secondary); font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: 1.5px; display: inline-block; margin-bottom: 10px;">Client Testimonials</span>
+            <h2 class="heading-title" style="font-family: 'Lexend', sans-serif; font-weight: 700; color: var(--color-primary); font-size: 36px; margin-bottom: 20px;">What Our Partners Say</h2>
+            <div style="width: 60px; height: 3px; background-color: var(--color-secondary); margin: 0 auto; border-radius: 2px;"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="slick-carousel"
+              data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows": false, "dots": true, "autoplay": true, "autoplaySpeed": 5000, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 1}} ]}'>
+              <?php
+              include_once 'admin/include/config.php';
+              if (isset($con)) {
+                  $tQuery = mysqli_query($con, "SELECT * FROM testimonials ORDER BY id ASC");
+                  if ($tQuery && mysqli_num_rows($tQuery) > 0) {
+                      while ($tRow = mysqli_fetch_assoc($tQuery)) {
+              ?>
+                        <div style="padding: 15px; height: 100%;">
+                          <div class="bovicon-about-card card-primary" style="background: #ffffff; border-radius: 16px; padding: 40px 30px; height: 100%; min-height: 300px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02); border: 1px solid rgba(234, 234, 234, 0.8); transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1); display: flex; flex-direction: column; justify-content: space-between; border-top: 5px solid var(--color-primary);">
+                            <div>
+                              <div style="margin-bottom: 20px; text-align: left;">
+                                <i class="fas fa-quote-left" style="font-size: 32px; color: rgba(255, 142, 37, 0.2);"></i>
+                              </div>
+                              <p style="font-family: 'Roboto', sans-serif; font-style: italic; color: #555; line-height: 1.6; font-size: 15px; margin-bottom: 25px; text-align: left;">
+                                "<?php echo htmlspecialchars($tRow['text']); ?>"
+                              </p>
+                            </div>
+                            <div style="display: flex; align-items: center; border-top: 1px solid #edf2f7; padding-top: 20px; margin-top: auto;">
+                              <div style="width: 45px; height: 45px; border-radius: 50%; background-color: rgba(10, 79, 138, 0.1); color: var(--color-primary); font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0; border: 1px solid rgba(10, 79, 138, 0.2);">
+                                <?php echo htmlspecialchars($tRow['avatar']); ?>
+                              </div>
+                              <div style="text-align: left;">
+                                <h5 style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 15px; color: #222; margin-bottom: 2px;"><?php echo htmlspecialchars($tRow['name']); ?></h5>
+                                <span style="font-family: 'Lexend', sans-serif; font-size: 12px; color: #777; display: block; line-height: 1.2;"><?php echo htmlspecialchars($tRow['designation']); ?></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+              <?php
+                      }
+                  }
+              }
+              ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================
         CTA Section
     =========================== -->
     <section class="cta-section text-center pt-80 pb-80" style="background-color: var(--color-primary); color: #fff;">
