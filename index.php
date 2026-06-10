@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="Chemlabs - Laboratory & Science Research HTML5 Template">
   <link href="assets/images/favicon/favicon.png" rel="icon">
-  <title>Chemlabs - Laboratory & Science Research HTML5 Template</title>
+  <title>BOVICAN</title>
   <?php include 'includes/style.php'; ?>
 </head>
 
@@ -25,136 +25,117 @@
     ============================== -->
     <section class="slider">
       <div class="slick-carousel carousel-dots-light m-slides-0"
-        data-slick='{"slidesToShow": 1,"autoplay": true, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear"}'>
+        data-slick='{"slidesToShow": 1,"autoplay": true, "arrows": false, "dots": false, "speed": 700,"fade": true,"cssEase": "linear"}'>
         <div class="slide-item bg-overlay align-v-h">
-          <div class="bg-img"><img src="assets/images/sliders/1.jpg" alt="slide img"></div>
+          <div class="bg-img"><img src="assets/images/sliders/3.jpg" alt="slide img"></div>
           <div class="container">
             <div class="row align-items-center">
-              <div class="col-12 col-xl-7">
+              <div class="col-12 col-xl-10">
                 <div class="slide-content">
-                  <h2 class="slide-title">Clear, Relatable, And Informative Testing Results!</h2>
-                  <p class="slide-desc">We are continually harnessing our medical expertise to build best test offering
-                    while investing in technology to transform the delivery of health care.</p>
+                  <h2 class="slide-title">Advanced Veterinary Diagnostics for Healthier Animals</h2>
+                  <p class="slide-desc" style="font-size: 18px; line-height: 1.5; font-weight: 400; color: #fff; margin-bottom: 20px;">
+                    Providing accurate, reliable, and timely veterinary diagnostic solutions for livestock, dairy farms, pet clinics, veterinarians, and animal healthcare professionals across India.
+                  </p>
+                  <p class="slide-desc d-none d-md-block" style="font-size: 15px; opacity: 0.9; margin-bottom: 30px; max-width: 850px;">
+                    At BOVICAN Veterinary Research & Diagnostics LLP, we combine scientific expertise, advanced laboratory technology, and veterinary excellence to deliver precise diagnostic results that support better animal health and disease management.
+                  </p>
                   <div class="d-flex flex-wrap align-items-center">
-                    <a href="tests-book-visit.php" class="btn btn-white btn-xl mr-30">
+                    <a href="tests.php" class="btn btn-white btn-xl mr-30 mb-2">
                       <i class="icon-arrow-right"></i>
-                      <span>Book a Home Visit</span>
+                      <span>Book a Test</span>
                     </a>
-                    <a href="tests-services.php" class="btn btn-white btn-outlined">
-                      <span>Tests and Services</span>
+                    <a href="contact-us.php" class="btn btn-white btn-outlined mb-2">
+                      <span>Contact Us</span>
                     </a>
                   </div>
                 </div><!-- /.slide-content -->
-              </div><!-- /.col-xl-7 -->
-            </div><!-- /.row -->
-          </div><!-- /.container -->
-        </div><!-- /.slide-item -->
-        <div class="slide-item bg-overlay align-v-h">
-          <div class="bg-img"><img src="assets/images/sliders/2.jpg" alt="slide img"></div>
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-12 col-xl-7">
-                <div class="slide-content">
-                  <h2 class="slide-title">Provide Trusted Data For A Clear Health Decisions!</h2>
-                  <p class="slide-desc">We are continually harnessing our medical expertise to build best test offering
-                    while investing in technology to transform the delivery of health care.</p>
-                  <div class="d-flex flex-wrap align-items-center">
-                    <a href="tests-book-visit.php" class="btn btn-white btn-xl mr-30">
-                      <i class="icon-arrow-right"></i>
-                      <span>Book a Home Visit</span>
-                    </a>
-                    <a href="tests-services.php" class="btn btn-white btn-outlined">
-                      <span>Tests and Services</span>
-                    </a>
-                  </div>
-                </div><!-- /.slide-content -->
-              </div><!-- /.col-xl-7 -->
+              </div><!-- /.col-xl-10 -->
             </div><!-- /.row -->
           </div><!-- /.container -->
         </div><!-- /.slide-item -->
       </div><!-- /.carousel -->
     </section><!-- /.slider -->
 
-
-
-
-
     <!-- ========================
-      About Layout 2
+      About Us Section
     =========================== -->
-    <section class="about-layout2 pt-100 pb-100">
+    <section id="about" class="about-section pt-100 pb-100">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+        <!-- Part 1: Who We Are & Image -->
+        <div class="row align-items-center mb-60">
+          <div class="col-sm-12 col-md-12 col-lg-6 mb-30">
             <div class="position-relative">
-              <div class="about-img rounded-clippath-filter">
-                <img src="assets/images/about/4.jpg" alt="about" class="octagon-clippath">
+              <div class="about-img" style="border-radius: 20px; overflow: hidden; box-shadow: 0 15px 45px rgba(10, 79, 138, 0.1);">
+                <img src="assets/images/about/dog_goggles.png" alt="BOVICAN Veterinary Diagnostics" class="img-fluid" style="width: 100%; border-radius: 20px; transition: transform 0.5s ease;">
               </div>
-              <ul class="features-list-layout4 list-unstyled p-0 mb-40">
-                <li class="feature-item">
-                  <div class="feature-item-inner octagon-clippath">
-                    <div class="feature-icon"><i class="icon-flask2"></i></div>
-                    <h4 class="feature-title mb-0">Strict Quality Practices</h4>
-                  </div>
-                </li>
-                <li class="feature-item">
-                  <div class="feature-item-inner octagon-clippath">
-                    <div class="feature-icon"><i class="icon-mortar"></i></div>
-                    <h4 class="feature-title mb-0">New Advanced Instruments</h4>
-                  </div>
-                </li>
-                <li class="feature-item">
-                  <div class="feature-item-inner octagon-clippath">
-                    <div class="feature-icon"><i class="icon-gloves"></i></div>
-                    <h4 class="feature-title mb-0">Customized Lab Solutions</h4>
-                  </div>
-                </li>
-              </ul><!-- /.features-list-layout4 -->
             </div>
-          </div><!-- /.col-xl-7 -->
-          <div class="col-sm-12 col-md-10 col-lg-12 col-xl-5">
-            <div class="about-text">
-              <div class="heading-layout2">
-                <h3 class="heading-title mb-40">Continually Harnessing Our Medical Expertise To Build Best Test
-                  Offering!
-                </h3>
-                <p class="heading-desc mb-30">With a belief that knowledge is power, we connect directly with patients
-                  to deliver their
-                  results so they have valuable health information when they need it most, we care about our people and
-                  are committed to excellence in the work.
+          </div><!-- /.col-lg-6 -->
+          <div class="col-sm-12 col-md-12 col-lg-6 mb-30">
+            <div class="about-text pl-40">
+              <div class="heading-layout2 mb-25">
+                <h2 class="heading-subtitle">Who We Are</h2>
+                <h3 class="heading-title">Specialized Veterinary Diagnostic & Research Organization</h3>
+              </div>
+              <div class="about-desc" style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.7; color: #555;">
+                <p class="mb-20">
+                  BOVICAN Veterinary Research & Diagnostics LLP is established with a vision to provide veterinarians, dairy farmers, livestock owners, and animal healthcare professionals with dependable diagnostic solutions that support informed clinical decisions and effective disease management.
+                </p>
+                <p class="mb-20">
+                  With a strong focus on quality, innovation, and customer satisfaction, BOVICAN delivers comprehensive veterinary testing services covering pathology, microbiology, molecular diagnostics, serology, and specialized research-based investigations.
                 </p>
               </div>
-              <div class="row">
-                <div class="col-auto">
-                  <img src="assets/images/about/3.jpg" alt="about" class="rounded-2 mb-20">
-                </div><!-- /.col -->
-                <div class="col-auto">
-                  <ul class="features-list-layout2 list-unstyled p-0 mb-40">
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Health, Wellness and Insurance</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">97% customer satisfaction rate</h4>
-                    </li>
-                    <li class="feature-item">
-                      <div class="feature-icon"><i class="icon-check"></i></div>
-                      <h4 class="feature-title mb-0">Family Scholarship Program</h4>
-                    </li>
-                  </ul>
-                </div><!-- /.col -->
-              </div><!-- /.row -->
-              <div class="note d-flex flex-wrap align-items-center">
-                <div class="note-icon"><i class="icon-alert"></i></div>
-                <p class="note-text flex-1 mb-0">While we believe we are more than just numbers, the depth of our
-                  laboratories is pretty impressive.</p>
-              </div><!-- /.note -->
             </div><!-- /.about-text -->
-          </div><!-- /.col-xl-5 -->
+          </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.About Layout 2 -->
+
+        <!-- Part 2: Core Values -->
+        <div class="row">
+          <div class="col-12 text-center mb-50">
+            <div class="heading-layout2">
+              <h2 class="heading-subtitle">Core Values</h2>
+              <h3 class="heading-title">What Drives Us</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-2-5 col-md-4 col-sm-6 mb-30">
+            <div class="bovicon-value-card">
+              <div class="bovicon-value-icon mb-15" style="background-color: var(--color-primary) !important; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 24px;"><i class="fas fa-award"></i></div>
+              <h4 style="font-size: 18px; font-weight: 700; font-family:'Lexend',sans-serif;">Quality</h4>
+              <p class="mb-0 text-muted" style="font-size:13.5px; line-height:1.5;">Maintaining the highest standards in testing and reporting.</p>
+            </div>
+          </div>
+          <div class="col-lg-2-5 col-md-4 col-sm-6 mb-30">
+            <div class="bovicon-value-card">
+              <div class="bovicon-value-icon mb-15" style="background-color: var(--color-primary) !important; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 24px;"><i class="fas fa-shield-alt"></i></div>
+              <h4 style="font-size: 18px; font-weight: 700; font-family:'Lexend',sans-serif;">Integrity</h4>
+              <p class="mb-0 text-muted" style="font-size:13.5px; line-height:1.5;">Ensuring transparency, ethics, and professionalism.</p>
+            </div>
+          </div>
+          <div class="col-lg-2-5 col-md-4 col-sm-6 mb-30">
+            <div class="bovicon-value-card">
+              <div class="bovicon-value-icon mb-15" style="background-color: var(--color-primary) !important; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 24px;"><i class="fas fa-lightbulb"></i></div>
+              <h4 style="font-size: 18px; font-weight: 700; font-family:'Lexend',sans-serif;">Innovation</h4>
+              <p class="mb-0 text-muted" style="font-size:13.5px; line-height:1.5;">Continuously adopting advanced technologies.</p>
+            </div>
+          </div>
+          <div class="col-lg-2-5 col-md-4 col-sm-6 mb-30">
+            <div class="bovicon-value-card">
+              <div class="bovicon-value-icon mb-15" style="background-color: var(--color-primary) !important; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 24px;"><i class="fas fa-hand-holding-heart"></i></div>
+              <h4 style="font-size: 18px; font-weight: 700; font-family:'Lexend',sans-serif;">Reliability</h4>
+              <p class="mb-0 text-muted" style="font-size:13.5px; line-height:1.5;">Providing accurate and timely diagnostic results.</p>
+            </div>
+          </div>
+          <div class="col-lg-2-5 col-md-4 col-sm-6 mb-30">
+            <div class="bovicon-value-card">
+              <div class="bovicon-value-icon mb-15" style="background-color: var(--color-primary) !important; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 24px;"><i class="fas fa-users"></i></div>
+              <h4 style="font-size: 18px; font-weight: 700; font-family:'Lexend',sans-serif;">Customer Focus</h4>
+              <p class="mb-0 text-muted" style="font-size:13.5px; line-height:1.5;">Building long-term relationships through service.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ========================
         Services Layout 3
@@ -164,8 +145,8 @@
         <div class="row">
           <div class="col-12 col-xl-6 offset-xl-3">
             <div class="heading-layout2 text-center mb-50">
-              <h2 class="heading-subtitle color-primary">Find the Right Test for Your Needs!</h2>
-              <h3 class="heading-title">Providing the Diverse Needs of Your Patient Community</h3>
+              <h2 class="heading-subtitle color-primary">Our Services</h2>
+              <h3 class="heading-title">Providing the Diverse Needs of Your Veterinary Practice</h3>
             </div>
           </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
@@ -225,163 +206,245 @@
       </div><!-- /.container -->
     </section><!-- /.Services Layout 3 -->
 
-
-
-
-
-    <!-- ==========================
-     Banner Layout 3
+    <!-- ========================
+        Industries We Serve
     =========================== -->
-    <section class="banner-layout3 bg-overlay bg-overlay-secondary-gradient pt-0 pb-130">
-      <div class="bg-img"><img src="assets/images/banners/6.jpg" alt="banner"></div>
+    <style>
+      .bovicon-industry-card {
+        background: #ffffff !important;
+        border-radius: 16px !important;
+        padding: 45px 30px !important;
+        height: 100% !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+        border: 1px solid rgba(234, 234, 234, 0.8) !important;
+        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        position: relative !important;
+        overflow: hidden !important;
+      }
+      .bovicon-industry-card:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 20px 40px rgba(10, 79, 138, 0.08) !important;
+        border-color: rgba(10, 79, 138, 0.2) !important;
+      }
+      .bovicon-industry-icon-box {
+        width: 70px !important;
+        height: 70px !important;
+        border-radius: 50% !important;
+        background-color: rgba(10, 79, 138, 0.06) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 28px !important;
+        color: var(--color-primary) !important;
+        margin-bottom: 25px !important;
+        transition: all 0.3s ease !important;
+        flex-shrink: 0 !important;
+      }
+      .bovicon-industry-card:hover .bovicon-industry-icon-box {
+        background-color: var(--color-primary) !important;
+        color: #ffffff !important;
+        transform: scale(1.05) !important;
+      }
+      .bovicon-industry-card.card-secondary-hover:hover {
+        border-color: rgba(255, 142, 37, 0.2) !important;
+      }
+      .bovicon-industry-card.card-secondary-hover:hover .bovicon-industry-icon-box {
+        background-color: var(--color-secondary) !important;
+      }
+      .bovicon-industry-title {
+        font-family: 'Lexend', sans-serif !important;
+        font-size: 20px !important;
+        font-weight: 700 !important;
+        color: #1a1a1a !important;
+        margin-bottom: 12px !important;
+        transition: all 0.3s ease !important;
+      }
+      .bovicon-industry-card:hover .bovicon-industry-title {
+        color: var(--color-primary) !important;
+      }
+      .bovicon-industry-card.card-secondary-hover:hover .bovicon-industry-title {
+        color: var(--color-secondary) !important;
+      }
+      .bovicon-industry-desc {
+        font-family: 'Roboto', sans-serif !important;
+        font-size: 14.5px !important;
+        line-height: 1.6 !important;
+        color: #666666 !important;
+        margin-bottom: 0 !important;
+      }
+    </style>
+
+    <section class="industries-section bg-gray pt-100 pb-100">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 col-lg-7 col-xl-6 pt-130">
-            <div class="heading-layout2 heading-light mb-60">
-              <h2 class="heading-subtitle color-primary">Your Health And Safety Is Important To Us</h2>
-              <h3 class="heading-title">Find Your Nearest Lab And Schedule An Appointment</h3>
+          <div class="col-12 col-xl-6 offset-xl-3">
+            <div class="heading-layout2 text-center mb-50">
+              <h2 class="heading-subtitle">Industries We Serve</h2>
+              <h3 class="heading-title">Supporting the Animal Healthcare Ecosystem</h3>
             </div>
-            <form class="contact-panel-form" id="contactForm">
-              <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                  <div class="form-group">
-                    <label for="service">Select Services</label>
-                    <select id="service" class="form-control">
-                      <?php
-                      $servSelect = mysqli_query($con, "SELECT title FROM services ORDER BY id ASC");
-                      if ($servSelect && mysqli_num_rows($servSelect) > 0) {
-                          while ($sRow = mysqli_fetch_assoc($servSelect)) {
-                              echo '<option value="' . htmlspecialchars($sRow['title']) . '">' . htmlspecialchars($sRow['title']) . '</option>';
-                          }
-                      } else {
-                          echo '<option value="">No services available</option>';
-                      }
-                      ?>
-                    </select>
-                  </div>
-                </div><!-- /.col-lg-6 -->
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                  <div class="form-group">
-                    <label for="location">Location</label>
-                    <select id="location" class="form-control">
-                      <?php
-                      if (isset($con)) {
-                          $citySelect = mysqli_query($con, "SELECT name FROM cities WHERE status = 1 ORDER BY name ASC");
-                          if ($citySelect && mysqli_num_rows($citySelect) > 0) {
-                              while ($cRow = mysqli_fetch_assoc($citySelect)) {
-                                  echo '<option value="' . htmlspecialchars($cRow['name']) . '">' . htmlspecialchars($cRow['name']) . '</option>';
-                              }
-                          } else {
-                              echo '<option value="">No cities available</option>';
-                          }
-                      }
-                      ?>
-                    </select>
-                  </div>
-                </div><!-- /.col-lg-6 -->
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                  <div class="form-group">
-                    <label for="name">Name (required)</label>
-                    <input type="text" class="form-control" placeholder="Name" id="name" required>
-                  </div>
-                </div><!-- /.col-lg-6 -->
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" placeholder="Email" id="email">
-                  </div>
-                </div><!-- /.col-lg-6 -->
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                  <div class="form-group">
-                    <label for="phone">Phone (required)</label>
-                    <input type="text" class="form-control" placeholder="Phone" id="phone">
-                  </div>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                  <div class="form-group form-group-date">
-                    <label for="date">Date (required)</label>
-                    <input type="date" class="form-control" id="date" required>
-                    <div class="form-group-icon">
-                      <i class="icon-calendar"></i><span class="mx-2">Select Date</span>
-                    </div>
-                  </div>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                  <div class="form-group form-group-date">
-                    <label for="time">Time (required)</label>
-                    <input type="time" class="form-control" id="time" required>
-                    <div class="form-group-icon">
-                      <i class="icon-clock"></i><span class="mx-2">Select Time</span>
-                    </div>
-                  </div>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-12">
-                  <div class="form-group">
-                    <label class="mb-20">Special Hours and Access</label>
-                    <div class="d-flex flex-wrap checkbox-controls">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck6">
-                        <label class="custom-control-label" for="customCheck6"> Open before 8:00 am</label>
-                      </div>
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck7">
-                        <label class="custom-control-label" for="customCheck7">Wheelchair Accessible</label>
-                      </div>
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck8">
-                        <label class="custom-control-label" for="customCheck8">Open Saturdays</label>
-                      </div>
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck9">
-                        <label class="custom-control-label" for="customCheck9"> Serving Customers with Autism</label>
-                      </div>
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck10">
-                        <label class="custom-control-label" for="customCheck10">24 Hour Holter Monitoring</label>
-                      </div>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary btn-primary-style2 btn-block btn-xhight">
-                    <span>Book Your Visit</span> <i class="icon-arrow-right"></i>
-                  </button>
-                </div><!-- /.col-lg-12 -->
-              </div><!-- /.row -->
-            </form>
-          </div><!-- /.col-xl-6 -->
-          <div class="col-md-12 col-lg-5 col-xl-5 offset-xl-1 position-relative">
-            <div class="banner-img">
-              <img src="assets/images/banners/5.jpg" alt="banner" class="rounded-4">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 mb-30">
+            <div class="bovicon-industry-card">
+              <div class="bovicon-industry-icon-box">
+                <i class="fas fa-tractor"></i>
+              </div>
+              <h4 class="bovicon-industry-title">Dairy Farms</h4>
+              <p class="bovicon-industry-desc">Supporting herd health and productivity through preventive diagnostics.</p>
             </div>
-            <p class="fz-16 color-white mw-500 mb-40">To provide a comfortable and safe environment for our patients and
-              employees, please avoid wearing scented perfumes or creams when visiting our Patient Service Centres.
+          </div>
+          <div class="col-lg-4 col-md-6 mb-30">
+            <div class="bovicon-industry-card card-secondary-hover">
+              <div class="bovicon-industry-icon-box">
+                <i class="fas fa-paw"></i>
+              </div>
+              <h4 class="bovicon-industry-title">Livestock Farms</h4>
+              <p class="bovicon-industry-desc">Comprehensive testing solutions for cattle, buffalo, sheep, and goats.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-30">
+            <div class="bovicon-industry-card">
+              <div class="bovicon-industry-icon-box">
+                <i class="fas fa-stethoscope"></i>
+              </div>
+              <h4 class="bovicon-industry-title">Veterinary Clinics</h4>
+              <p class="bovicon-industry-desc">Reliable diagnostic support for companion animal and livestock practitioners.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-30">
+            <div class="bovicon-industry-card card-secondary-hover">
+              <div class="bovicon-industry-icon-box">
+                <i class="fas fa-flask"></i>
+              </div>
+              <h4 class="bovicon-industry-title">Research Institutions</h4>
+              <p class="bovicon-industry-desc">Specialized laboratory services for veterinary and animal health research.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-30">
+            <div class="bovicon-industry-card">
+              <div class="bovicon-industry-icon-box">
+                <i class="fas fa-building"></i>
+              </div>
+              <h4 class="bovicon-industry-title">Animal Health Companies</h4>
+              <p class="bovicon-industry-desc">Diagnostic partnerships for disease surveillance and product evaluation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================
+        Mission & Vision
+    =========================== -->
+    <style>
+      .bovicon-mv-card {
+        background: #ffffff !important;
+        border-radius: 16px !important;
+        padding: 50px 40px !important;
+        height: 100% !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05) !important;
+        transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        position: relative !important;
+        overflow: visible !important;
+      }
+      .bovicon-mv-card.card-primary {
+        border-top: 5px solid var(--color-primary) !important;
+      }
+      .bovicon-mv-card.card-secondary {
+        border-top: 5px solid var(--color-secondary) !important;
+      }
+      .bovicon-mv-card:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.12) !important;
+      }
+      .bovicon-mv-icon-box {
+        width: 65px !important;
+        height: 65px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 26px !important;
+        color: #fff !important;
+        margin-bottom: 25px !important;
+        flex-shrink: 0 !important;
+        box-shadow: 0 8px 16px rgba(10, 79, 138, 0.2) !important;
+      }
+      .bovicon-mv-card.card-secondary .bovicon-mv-icon-box {
+        box-shadow: 0 8px 16px rgba(255, 142, 37, 0.25) !important;
+      }
+      .bovicon-mv-title {
+        font-family: 'Lexend', sans-serif !important;
+        font-size: 24px !important;
+        font-weight: 700 !important;
+        color: #1a1a1a !important;
+        margin-bottom: 15px !important;
+      }
+      .bovicon-mv-text {
+        font-family: 'Roboto', sans-serif !important;
+        font-size: 16px !important;
+        line-height: 1.65 !important;
+        color: #4a5568 !important;
+        margin-bottom: 0 !important;
+      }
+    </style>
+
+    <section class="mission-vision-section pt-100 pb-100" style="background: linear-gradient(135deg, rgba(10, 79, 138, 0.95), rgba(5, 40, 70, 0.95)), url('assets/images/banners/7.jpg') no-repeat center center; background-size: cover; position: relative;">
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 mb-30">
+            <div class="bovicon-mv-card card-secondary">
+              <div class="bovicon-mv-icon-box" style="background-color: var(--color-secondary);">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h3 class="bovicon-mv-title">Our Mission</h3>
+              <p class="bovicon-mv-text">
+                To provide world-class veterinary diagnostic solutions that improve animal health, support veterinarians, and contribute to the advancement of veterinary science.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 mb-30">
+            <div class="bovicon-mv-card card-primary">
+              <div class="bovicon-mv-icon-box" style="background-color: var(--color-primary);">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h3 class="bovicon-mv-title">Our Vision</h3>
+              <p class="bovicon-mv-text">
+                To become India's most trusted veterinary diagnostics and research organization by delivering excellence, innovation, and scientific accuracy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================
+        CTA Section
+    =========================== -->
+    <section class="cta-section text-center pt-80 pb-80" style="background-color: var(--color-primary); color: #fff;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h3 class="mb-20 text-white" style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 32px;">Need Reliable Veterinary Diagnostics?</h3>
+            <p class="mb-40 text-white" style="font-size: 18px; opacity: 0.9; line-height: 1.6;">
+              Partner with BOVICAN for accurate testing, expert interpretation, and dependable veterinary laboratory services.
             </p>
-            <div class="fancybox-layout2 fancybox-light">
-              <div class="fancybox-item">
-                <div class="fancybox-icon">
-                  <i class="icon-mortar"></i>
-                </div><!-- /.fancybox-icon -->
-                <div class="fancybox-body">
-                  <h4 class="fancybox-title">Patient Centered Care</h4>
-                  <p class="fancybox-desc">We work day and night to solve the problems that can help them move forward
-                    for those who is seeking answers!</p>
-                </div><!-- /.fancybox-body -->
-              </div><!-- /.fancybox-item -->
-              <div class="fancybox-item">
-                <div class="fancybox-icon">
-                  <i class="icon-flask"></i>
-                </div><!-- /.fancybox-icon -->
-                <div class="fancybox-body">
-                  <h4 class="fancybox-title">Quality Improvement</h4>
-                  <p class="fancybox-desc">Our team typically processes over 3 million patient every month and fifty of
-                    the top drugs developed in 2022.</p>
-                </div><!-- /.fancybox-body -->
-              </div><!-- /.fancybox-item -->
-            </div><!-- /.fancybox-layout2 -->
-            <div class="banner-icon d-none d-md-block"><i class="icon-microscope"></i></div>
-          </div><!-- /.col-xl-5 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.Banner Layout 3 -->
+            <a href="contact-us.php" class="btn btn-white btn-xl" style="background:#fff; color:var(--color-primary) !important; border:none; padding:15px 40px; border-radius:30px; font-weight:700; transition:all 0.3s ease;">
+              <span>Contact Us Today</span>
+              <i class="icon-arrow-right ml-10"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 

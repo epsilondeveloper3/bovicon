@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="Chemlabs - Laboratory & Science Research HTML5 Template">
   <link href="assets/images/favicon/favicon.png" rel="icon">
-  <title>Chemlabs - Laboratory & Science Research HTML5 Template</title>
+  <title>BOVICAN</title>
   <?php include 'includes/style.php'; ?>
 </head>
 
@@ -20,83 +20,59 @@
     <?php include 'includes/header.php'; ?>
 
 
-    <!-- ========================= 
-            Google Map
-    =========================  -->
-    <section class="map py-0">
-      <iframe height="620"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11971.627628962768!2d2.1354741829540913!3d41.39782801658141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49876ab903fb7%3A0x2600fae14082f492!2sSant%20Gervasi%20-%20Galvany%2C%20Barcelona%2C%20Spain!5e0!3m2!1sen!2sus!4v1667567027882!5m2!1sen!2sus"></iframe>
-      <div class="map-container">
-        <div class="contact-panel p-0">
-          <div class="panel-header">
-            <h3 class="panel-title color-white mb-0">Offices and Main Labs</h3>
-          </div>
-          <div class="accordion" id="accordion">
-            <div class="accordion-item opened">
-              <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#contact-collapse1">
-                <a class="accordion-title" href="#">London Office</a>
-              </div><!-- /.accordion-item-header -->
-              <div id="contact-collapse1" class="collapse show" data-bs-parent="#accordion">
-                <div class="accordion-body">
-                  <ul class="contact-list list-unstyled mb-0">
-                    <li>Phone: 010612457410</li>
-                    <li>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0b48636e66676a69784b3c647964646d25686466">[email&#160;protected]</a></li>
-                    <li>Address: 2307 Beverley Rd Brooklyn, NY</li>
-                    <li>Hours: Mon-Fri: 8am – 7pm</li>
-                  </ul>
-                </div><!-- /.accordion-item-body -->
-              </div>
-            </div><!-- /.accordion-item -->
-            <div class="accordion-item">
-              <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#contact-collapse2">
-                <a class="accordion-title" href="#">Berlin Office</a>
-              </div><!-- /.accordion-item-header -->
-              <div id="contact-collapse2" class="collapse" data-bs-parent="#accordion">
-                <div class="accordion-body">
-                  <ul class="contact-list list-unstyled mb-0">
-                    <li>Phone: 01001314999</li>
-                    <li>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2b68434e46474a49586b1c445944444d05484446">[email&#160;protected]</a></li>
-                    <li>Address: 2307 Beverley Rd Brooklyn, NY</li>
-                    <li>Hours: Mon-Fri: 8am – 7pm</li>
-                  </ul>
-                </div><!-- /.accordion-item-body -->
-              </div>
-            </div><!-- /.accordion-item -->
-            <div class="accordion-item">
-              <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#contact-collapse3">
-                <a class="accordion-title" href="#">Manchester Office</a>
-              </div><!-- /.accordion-item-header -->
-              <div id="contact-collapse3" class="collapse" data-bs-parent="#accordion">
-                <div class="accordion-body">
-                  <ul class="contact-list list-unstyled mb-0">
-                    <li>Phone: 010612457410</li>
-                    <li>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="befdd6dbd3d2dfdccdfe89d1ccd1d1d890ddd1d3">[email&#160;protected]</a></li>
-                    <li>Address: 2307 Beverley Rd Brooklyn, NY</li>
-                    <li>Hours: Mon-Fri: 8am – 7pm</li>
-                  </ul>
-                </div><!-- /.accordion-item-body -->
-              </div>
-            </div><!-- /.accordion-item -->
-          </div><!-- /.accordion -->
-        </div>
-      </div><!-- /.map-container -->
-      <div class="curve-top-shape d-none d-xl-block">
-        <svg class="curve-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path class="curve-path" d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"></path>
-        </svg>
-      </div><!-- /.curve -->
-    </section><!-- /.GoogleMap -->
+    <!-- ========================
+       Page Title 
+    =========================== -->
+    <section class="page-title-layout2 page-title-light pb-30 bg-overlay bg-parallax">
+      <div class="bg-img"><img src="assets/images/page-titles/9.jpg" alt="background"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-9">
+            <span class="pagetitle-subheading">Contact BOVICAN diagnostics</span>
+            <h1 class="pagetitle-heading">Get in Touch with Us</h1>
+            <p class="pagetitle-desc">Have questions or want to request a demo or book a diagnostic test? Complete the form below and we will get back to you within one business day.</p>
+          </div><!-- /.col-xl-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+      <div class="breadcrumb-area">
+        <div class="container">
+          <nav>
+            <ol class="breadcrumb justify-content-center mt-80 mb-0">
+              <li class="breadcrumb-item">
+                <a href="index.php">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+            </ol>
+          </nav>
+        </div><!-- /.container -->
+      </div><!-- /.breadcrumb-area -->
+    </section><!-- /.page-title -->
 
     <!-- ==========================
-        contact layout 1
+        Contact Layout 1
     =========================== -->
     <section class="contact-layout1">
       <div class="container">
         <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>
+              <div class="alert alert-success alert-dismissible fade show mb-40" role="alert" style="border-radius: 8px; font-family: 'Lexend', sans-serif;">
+                <strong>Thank you!</strong> Your request has been successfully submitted and saved. We will contact you shortly.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            <?php elseif (isset($_GET['error'])): ?>
+              <div class="alert alert-danger alert-dismissible fade show mb-40" role="alert" style="border-radius: 8px; font-family: 'Lexend', sans-serif;">
+                <strong>Error!</strong> Something went wrong. Please check your fields and try again.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            <?php endif; ?>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-7">
             <div class="heading-layout2 mb-50">
-              <h2 class="heading-subtitle">Contact Us And We Will Respond Within The Next Two Working Days</h2>
-              <h3 class="heading-title">Get In Touch With Your Nearest Local Health Business Sales</h3>
+              <h2 class="heading-subtitle">Contact Us And We Will Respond Within One Working Day</h2>
+              <h3 class="heading-title">Get In Touch With BOVICAN Diagnostics Sales & Support Team</h3>
             </div>
           </div><!-- /.col-lg-7 -->
         </div><!-- /.row -->
@@ -104,45 +80,46 @@
           <div class="col-sm-12 col-md-12 col-lg-4">
             <div class="text-block">
               <p class="text-block-desc">Our customer care staff will distribute your request for consultation to the
-                appropriate Laboratory Medicine discipline.</p>
+                appropriate Veterinary Diagnostics discipline.</p>
               <p class="text-block-desc">A member of the Medical/Scientific Staff will get back to the requesting
                 healthcare provider within one business day.
               </p>
             </div>
-            <a href="#" class="btn btn-secondary">
-              <i class="icon-arrow-right"></i> <span>Find A Lab</span>
+            <a href="tests.php" class="btn btn-secondary mb-30">
+              <i class="icon-arrow-right"></i> <span>Explore Tests Menu</span>
             </a>
           </div><!-- /.col-lg-4 -->
           <div class="col-sm-12 col-md-12 col-lg-8">
-            <form class="contact-panel-form" method="post" action="assets/php/contact.php" id="contactForm">
+            <form class="contact-panel-form" method="post" action="submit_inquiry.php" id="contactForm">
               <div class="row">
+                
+
                 <div class="col-sm-12 col-md-4 col-lg-4">
                   <div class="form-group">
                     <input type="text" class="form-control" placeholder="Name" id="contact-name" name="contact-name"
-                      required>
+                      required style="height: 50px; font-size: 14px;">
                   </div>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-sm-12 col-md-4 col-lg-4">
                   <div class="form-group">
                     <input type="email" class="form-control" placeholder="Email" id="contact-email" name="contact-email"
-                      required>
+                      required style="height: 50px; font-size: 14px;">
                   </div>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-sm-12 col-md-4 col-lg-4">
                   <div class="form-group">
                     <input type="text" class="form-control" placeholder="Phone" id="contact-Phone" name="contact-phone"
-                      required>
+                      required style="height: 50px; font-size: 14px;">
                   </div>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-12">
                   <div class="form-group">
                     <textarea class="form-control" placeholder="Additional Details" id="contact-message"
-                      name="contact-message"></textarea>
+                      name="contact-message" rows="5" style="font-size: 14px; padding: 15px;"></textarea>
                   </div>
                   <button type="submit" class="btn btn-primary btn-block btn-xhight mt-10">
                     <span>Submit Request</span> <i class="icon-arrow-right"></i>
                   </button>
-                  <div class="contact-result"></div>
                 </div><!-- /.col-lg-12 -->
               </div><!-- /.row -->
             </form>

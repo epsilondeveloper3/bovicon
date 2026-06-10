@@ -174,11 +174,11 @@
                   <!-- Copywrite Text -->
                   <div class="copywrite-text">
                     <p class="font-13">
-                      Developed by &copy; <a href="#">Theme-life</a>
+                      Developed by &copy; <a href="#">Epsilon Developer</a>
                     </p>
                   </div>
                   <div class="fotter-icon text-center">
-                    <p class="mb-0 font-13">2024 &copy; Laxom Admin</p>
+                    <p class="mb-0 font-13">2026 &copy; </p>
                   </div>
                 </footer>
               </div>

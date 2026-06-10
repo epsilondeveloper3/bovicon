@@ -15,11 +15,7 @@
                 <h6 class="footer-widget-title">About Us</h6>
                 <nav>
                   <ul class="list-unstyled">
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="team.html">Leadership Team</a></li>
-                    <li><a href="blog.html">News & Media</a></li>
-                    <li><a href="services.html">Sustainability</a></li>
-                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="index.php#about">About Us</a></li>
                   </ul>
                 </nav>
               </div><!-- /.footer-widget-content -->
@@ -29,12 +25,8 @@
                 <h6 class="footer-widget-title">Tests & Services</h6>
                 <nav>
                   <ul class="list-unstyled">
-                    <li><a href="#">General Diagnostic Tests</a></li>
-                    <li><a href="#"> Specialized Genetic Tests</a></li>
-                    <li><a href="#"> Food Sensitivity Tests</a></li>
-                    <li><a href="#">Genova Diagnostics </a></li>
-                    <li><a href="#">Hormone Insights Tests</a></li>
-                    <li><a href="#">Naturopathic Tests</a></li>
+                    <li><a href="tests.php">Veterinary Tests</a></li>
+                    <li><a href="index.php#services">Diagnostic Services</a></li>
                   </ul>
                 </nav>
               </div><!-- /.footer-widget-content -->
@@ -44,12 +36,10 @@
                 <h6 class="footer-widget-title">Links</h6>
                 <nav>
                   <ul class="list-unstyled">
-                    <li><a href="#">Knowledge base</a></li>
-                    <li><a href="#">Report a Vulnerability</a></li>
-                    <li><a href="#">Suppliers & Vendors</a></li>
-                    <li><a href="#">Genova Diagnostics </a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="index.php#about">About Us</a></li>
+                    <li><a href="tests.php">Tests</a></li>
+                    <li><a href="contact-us.php">Contact Us</a></li>
                   </ul>
                 </nav>
               </div><!-- /.footer-widget-content -->
@@ -80,33 +70,13 @@
       <div class="footer-secondary">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-sm-12 col-md-12 col-lg-7">
-              <nav>
-                <ul class="list-unstyled footer-copyright-links d-flex flex-wrap mb-0">
-                  <li><a href="#">Privacy Statement</a></li>
-                  <li><a href="#">Terms of Use</a></li>
-                  <li><a href="#">Notice of Nondiscrimination</a></li>
-                  <li><a href="#">Report a Vulnerability</a></li>
-                </ul>
-              </nav>
+            <div class="col-sm-12 col-md-6">
               <div class="mt-1">
-                <span>&copy; 2023 Chemlabs, All Rights Reserved. With Love by </span>
-                <a href="http://themeforest.net/user/7oroof">7oroof.com</a>
+                <span>&copy; <?php echo date('Y'); ?> BOVICAN. All Rights Reserved.</span>
               </div>
             </div><!-- /.col-lg-6 -->
-            <div class="col-sm-12 col-md-12 col-lg-5 d-flex flex-wrap justify-content-between">
-              <ul class="social-icons list-unstyled mb-0 mr-50">
-                <li>
-                  <a href="#"><i class="social-icon icon-facebook"></i><span class="social-title">Facebook</span></a>
-                </li>
-                <li>
-                  <a href="#"><i class="social-icon icon-twitter"></i><span class="social-title">Twitter</span></a>
-                </li>
-                <li>
-                  <a href="#"><i class="social-icon icon-youtube"></i><span class="social-title">Youtube</span></a>
-                </li>
-              </ul><!-- /.social-icons -->
-              <button id="scrollTopBtn">
+            <div class="col-sm-12 col-md-6 text-md-right text-center mt-3 mt-md-0">
+              <button id="scrollTopBtn" class="float-md-right float-none">
                 <span class="btn-text">Back To Top </span> <i class="icon-arrow-long"></i>
               </button>
             </div>

@@ -24,6 +24,7 @@ if (isset($_POST['save_test'])) {
     $frequency = mysqli_real_escape_string($con, trim($_POST['frequency'] ?? 'Daily'));
     $parameter_count = intval($_POST['parameter_count'] ?? 1);
     $parameters = mysqli_real_escape_string($con, trim($_POST['parameters'] ?? ''));
+    $categories = mysqli_real_escape_string($con, trim($_POST['categories'] ?? 'General'));
     $price = floatval($_POST['price'] ?? 0.0);
 
     if ($name == "" || $price <= 0) {
@@ -33,10 +34,10 @@ if (isset($_POST['save_test'])) {
     }
 
     if ($id > 0) {
-        mysqli_query($con, "UPDATE tests SET name='$name', preparation='$preparation', frequency='$frequency', parameter_count=$parameter_count, parameters='$parameters', price=$price WHERE id=$id");
+        mysqli_query($con, "UPDATE tests SET name='$name', preparation='$preparation', frequency='$frequency', parameter_count=$parameter_count, parameters='$parameters', price=$price, categories='$categories' WHERE id=$id");
         addAlert("Test updated successfully.");
     } else {
-        mysqli_query($con, "INSERT INTO tests (name, preparation, frequency, parameter_count, parameters, price) VALUES ('$name', '$preparation', '$frequency', $parameter_count, '$parameters', $price)");
+        mysqli_query($con, "INSERT INTO tests (name, preparation, frequency, parameter_count, parameters, price, categories) VALUES ('$name', '$preparation', '$frequency', $parameter_count, '$parameters', $price, '$categories')");
         addAlert("Test added successfully.");
     }
 
@@ -107,6 +108,7 @@ $testRes = mysqli_query($con, "SELECT * FROM tests ORDER BY id DESC");
                                             <th>#</th>
                                             <th>Test Name</th>
                                             <th>Price</th>
+                                            <th>Categories</th>
                                             <th>Preparation</th>
                                             <th>Frequency</th>
                                             <th>Parameters Covered</th>
@@ -121,6 +123,14 @@ $testRes = mysqli_query($con, "SELECT * FROM tests ORDER BY id DESC");
                                                 <td><?= $i++ ?></td>
                                                 <td><strong><?= htmlspecialchars($row['name']) ?></strong></td>
                                                 <td><span class="text-success font-weight-bold">₹<?= number_format($row['price'], 2) ?></span></td>
+                                                <td>
+                                                    <?php
+                                                    $cats = explode(", ", $row['categories'] ?? 'General');
+                                                    foreach ($cats as $cat) {
+                                                        echo '<span class="badge bg-info text-white me-1 mb-1">' . htmlspecialchars($cat) . '</span>';
+                                                    }
+                                                    ?>
+                                                </td>
                                                 <td><?= htmlspecialchars($row['preparation']) ?></td>
                                                 <td><?= htmlspecialchars($row['frequency']) ?></td>
                                                 <td>
@@ -132,14 +142,15 @@ $testRes = mysqli_query($con, "SELECT * FROM tests ORDER BY id DESC");
                                                 <td><?= formatDate($row['created_at']) ?></td>
                                                 <td>
                                                     <button class="btn btn-success btn-sm" onclick="openEditModal(
-                                <?= $row['id'] ?>,
-                                '<?= htmlspecialchars($row['name'], ENT_QUOTES) ?>',
-                                '<?= htmlspecialchars($row['preparation'], ENT_QUOTES) ?>',
-                                '<?= htmlspecialchars($row['frequency'], ENT_QUOTES) ?>',
-                                <?= $row['parameter_count'] ?>,
-                                `<?= htmlspecialchars($row['parameters'], ENT_QUOTES) ?>`,
-                                <?= $row['price'] ?>
-                            )">
+                                                        <?= $row['id'] ?>,
+                                                        '<?= htmlspecialchars($row['name'], ENT_QUOTES) ?>',
+                                                        '<?= htmlspecialchars($row['preparation'], ENT_QUOTES) ?>',
+                                                        '<?= htmlspecialchars($row['frequency'], ENT_QUOTES) ?>',
+                                                        <?= $row['parameter_count'] ?>,
+                                                        `<?= htmlspecialchars($row['parameters'], ENT_QUOTES) ?>`,
+                                                        <?= $row['price'] ?>,
+                                                        '<?= htmlspecialchars($row['categories'] ?? 'General', ENT_QUOTES) ?>'
+                                                    )">
                                                         <i class="bx bx-edit-alt"></i>
                                                     </button>
 
@@ -176,11 +187,15 @@ $testRes = mysqli_query($con, "SELECT * FROM tests ORDER BY id DESC");
 
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-8 mb-3">
+                            <div class="col-md-5 mb-3">
                                 <label class="form-label">Test Name</label>
                                 <input type="text" name="name" id="testName" class="form-control" required placeholder="e.g. COMPLETE BLOOD COUNT;CBC">
                             </div>
                             <div class="col-md-4 mb-3">
+                                <label class="form-label">Categories (comma-separated)</label>
+                                <input type="text" name="categories" id="testCategories" class="form-control" required placeholder="e.g. Clinical Path & Special Chemistry">
+                            </div>
+                            <div class="col-md-3 mb-3">
                                 <label class="form-label">Price (INR)</label>
                                 <input type="number" step="0.01" name="price" id="testPrice" class="form-control" required placeholder="e.g. 390.00">
                             </div>
@@ -225,6 +240,7 @@ $testRes = mysqli_query($con, "SELECT * FROM tests ORDER BY id DESC");
             $("#modalTitle").text("Add Test");
             $("#testId").val("");
             $("#testName").val("");
+            $("#testCategories").val("General");
             $("#testPreparation").val("No special preparation required");
             $("#testFrequency").val("Daily");
             $("#testParameterCount").val("1");
@@ -232,10 +248,11 @@ $testRes = mysqli_query($con, "SELECT * FROM tests ORDER BY id DESC");
             $("#testPrice").val("");
         }
 
-        function openEditModal(id, name, preparation, frequency, paramCount, parameters, price) {
+        function openEditModal(id, name, preparation, frequency, paramCount, parameters, price, categories) {
             $("#modalTitle").text("Edit Test");
             $("#testId").val(id);
             $("#testName").val(name);
+            $("#testCategories").val(categories);
             $("#testPreparation").val(preparation);
             $("#testFrequency").val(frequency);
             $("#testParameterCount").val(paramCount);

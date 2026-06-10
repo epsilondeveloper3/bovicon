@@ -51,6 +51,12 @@ function activeClass($pages, $className = 'active')
               <span>Cities</span>
             </a>
           </li>
+
+          <li class="<?php echo trim(activeClass('contact.php')); ?>">
+            <a href="contact.php"><i class='bx bx-envelope'></i>
+              <span>Inquiries</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>

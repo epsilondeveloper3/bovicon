@@ -180,8 +180,14 @@ $serviceRes = mysqli_query($con, "SELECT * FROM services ORDER BY id DESC");
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label class="form-label">Icon Class</label>
-                                <input type="text" name="icon" id="serviceIcon" class="form-control" required placeholder="e.g. icon-microscope">
-                                <small class="text-muted">Available: icon-microscope, icon-dna-structure, icon-florence-flask, icon-mortar, icon-atom, icon-molecule2</small>
+                                <select name="icon" id="serviceIcon" class="form-control" required style="height: 38px;">
+                                    <option value="icon-microscope">Microscope (icon-microscope)</option>
+                                    <option value="icon-dna-structure">DNA Structure (icon-dna-structure)</option>
+                                    <option value="icon-florence-flask">Florence Flask (icon-florence-flask)</option>
+                                    <option value="icon-mortar">Mortar & Pestle (icon-mortar)</option>
+                                    <option value="icon-atom">Atom (icon-atom)</option>
+                                    <option value="icon-molecule2">Molecule (icon-molecule2)</option>
+                                </select>
                             </div>
                         </div>
 
