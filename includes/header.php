@@ -9,10 +9,7 @@
               <div class="d-flex align-items-center justify-content-between">
                 <ul class="contact-list d-flex flex-wrap align-items-center list-unstyled mb-0">
                   <li>
-                    <i class="icon-phone"></i><a href="tel:+5565454117">Emergency Line: (002) 01061245741</a>
-                  </li>
-                  <li>
-                    <i class="icon-location"></i><a href="#">Location: Brooklyn, New York</a>
+                    <i class="icon-location"></i><a href="#">Location: SUR NO. 151 2, DOWNTOWN BUILDING, MADHVANI ROAD, Porbandar, Gujarat, India - 360575</a>
                   </li>
                   <li>
                     <i class="icon-clock"></i><a href="contact-us.php">Mon - Fri: 8:00 am - 7:00 pm</a>

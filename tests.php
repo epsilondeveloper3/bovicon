@@ -173,7 +173,7 @@
       }
       .mobile-category-select:focus {
         border-color: var(--color-primary);
-        box-shadow: 0 0 0 0.2rem rgba(10, 79, 138, 0.15);
+        box-shadow: 0 0 0 0.2rem rgba(var(--color-primary-rgb), 0.15);
       }
       
       /* Search styling */
@@ -251,7 +251,7 @@
       .test-card:hover {
         transform: translateY(-6px);
         box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
-        border-color: rgba(10, 79, 138, 0.2);
+        border-color: rgba(var(--color-primary-rgb), 0.2);
       }
       .test-title {
         font-family: 'Lexend', sans-serif;
@@ -747,7 +747,7 @@
   <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true" style="z-index: 1050; display: none;">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content" style="border-radius: 12px; overflow: hidden; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: #ffffff;">
-        <div class="modal-header" style="background-color: #0A4F8A; color: #ffffff; padding: 20px 24px; border-bottom: none; display: flex; align-items: center; justify-content: space-between;">
+        <div class="modal-header" style="background-color: var(--color-primary); color: #ffffff; padding: 20px 24px; border-bottom: none; display: flex; align-items: center; justify-content: space-between;">
           <h5 class="modal-title font-weight-bold" id="bookingModalLabel" style="font-family: 'Lexend', sans-serif; color: #ffffff; margin-bottom: 0; font-size: 18px;">Book Diagnostic Test</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="background: none; border: none; color: #ffffff; font-size: 24px; line-height: 1; opacity: 0.8; cursor: pointer; padding: 0; margin: 0; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">&times;</button>
         </div>
@@ -756,7 +756,7 @@
           <div class="modal-body" style="padding: 24px; font-family: 'Lexend', sans-serif;">
             <div style="margin-bottom: 18px;">
               <label class="form-label" style="font-weight: 700; color: #333; font-size: 14px; margin-bottom: 8px; display: block;">Selected Test</label>
-              <div class="p-3 border rounded" style="background-color: #f8f9fa; border-radius: 8px; border: 1px solid #e2e8f0; font-weight: 700; color: #0A4F8A; font-size: 15px; display: flex; align-items: center; padding: 12px 15px;">
+              <div class="p-3 border rounded" style="background-color: #f8f9fa; border-radius: 8px; border: 1px solid #e2e8f0; font-weight: 700; color: var(--color-primary); font-size: 15px; display: flex; align-items: center; padding: 12px 15px;">
                 <i class="fas fa-flask text-danger" style="font-size: 16px; margin-right: 8px;"></i>
                 <span id="modalSelectedTestDisplay"></span>
               </div>
@@ -780,7 +780,7 @@
           </div>
           <div class="modal-footer" style="background-color: #f8f9fa; border-top: 1px solid #edf2f7; padding: 15px 24px; display: flex; justify-content: flex-end; gap: 10px;">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius: 30px; font-weight: 700; padding: 10px 24px; font-family: 'Lexend', sans-serif; border: 1px solid #cbd5e1; background-color: #fff; color: #555; cursor: pointer;">Cancel</button>
-            <button type="submit" class="btn btn-primary" style="border-radius: 30px; font-weight: 700; padding: 10px 28px; font-family: 'Lexend', sans-serif; background-color: #0A4F8A; border-color: #0A4F8A; color: #fff; cursor: pointer;">Confirm Booking</button>
+            <button type="submit" class="btn btn-primary" style="border-radius: 30px; font-weight: 700; padding: 10px 28px; font-family: 'Lexend', sans-serif; background-color: var(--color-primary); border-color: var(--color-primary); color: #fff; cursor: pointer;">Confirm Booking</button>
           </div>
         </form>
       </div>

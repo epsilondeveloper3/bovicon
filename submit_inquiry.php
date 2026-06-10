@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $inserted = mysqli_query($con, $query);
 
     // Send Email to Admin
-    $admin_email = "janvikotecha3132@gmail.com";
+    $admin_email = "info.bovicanvet@gmail.com";
     $subject = ($type === 'booking') ? "New Test Booking Request: $test_name" : "New Contact / Demo Request";
     
     $body = "Dear Admin,\n\n";

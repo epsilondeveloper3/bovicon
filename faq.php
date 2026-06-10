@@ -70,8 +70,8 @@
               ?>
                         <div class="faq-item" style="border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 20px; overflow: hidden; background: #ffffff; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.01); transition: all 0.25s ease;">
                           <button class="faq-toggle-btn" style="width: 100%; background: none; border: none; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; text-align: left; cursor: pointer; outline: none;">
-                            <span style="font-family: 'Lexend', sans-serif; font-weight: 700; color: #0A4F8A; font-size: 16px; padding-right: 15px;"><?php echo htmlspecialchars($fRow['question']); ?></span>
-                            <i class="fas fa-chevron-down faq-arrow" style="font-size: 14px; color: #FF8E25; transition: transform 0.3s ease;"></i>
+                            <span style="font-family: 'Lexend', sans-serif; font-weight: 700; color: var(--color-primary); font-size: 16px; padding-right: 15px;"><?php echo htmlspecialchars($fRow['question']); ?></span>
+                            <i class="fas fa-chevron-down faq-arrow" style="font-size: 14px; color: var(--color-secondary); transition: transform 0.3s ease;"></i>
                           </button>
                           <div class="faq-content-box" style="max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1); background-color: #f8fafc;">
                             <div style="padding: 24px 28px; border-top: 1px solid #edf2f7; font-family: 'Roboto', sans-serif; font-size: 15px; color: #555; line-height: 1.6; text-align: left;">
@@ -156,8 +156,8 @@
                 if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
                     content.style.maxHeight = content.scrollHeight + "px";
                     arrow.style.transform = "rotate(180deg)";
-                    item.style.borderColor = "rgba(10, 79, 138, 0.4)";
-                    item.style.boxShadow = "0 10px 15px -3px rgba(10, 79, 138, 0.05), 0 4px 6px -2px rgba(10, 79, 138, 0.02)";
+                    item.style.borderColor = "rgba(0, 128, 129, 0.4)";
+                    item.style.boxShadow = "0 10px 15px -3px rgba(0, 128, 129, 0.05), 0 4px 6px -2px rgba(0, 128, 129, 0.02)";
                 } else {
                     content.style.maxHeight = "0";
                     arrow.style.transform = "rotate(0deg)";

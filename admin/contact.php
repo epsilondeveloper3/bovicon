@@ -43,11 +43,11 @@ $inquiryRes = mysqli_query($con, "SELECT * FROM inquiries ORDER BY id DESC");
     <?php include('include/head.php') ?>
     <style>
         .badge-demo {
-            background-color: #FF8E25; /* Warm Orange */
+            background-color: #ee7355; /* Coral Orange */
             color: #ffffff;
         }
         .badge-booking {
-            background-color: #0A4F8A; /* Sapphire Blue */
+            background-color: #008081; /* Teal */
             color: #ffffff;
         }
         .contact-details p {

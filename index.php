@@ -65,7 +65,7 @@
         <div class="row align-items-center mb-60">
           <div class="col-sm-12 col-md-12 col-lg-6 mb-30">
             <div class="position-relative">
-              <div class="about-img" style="border-radius: 20px; overflow: hidden; box-shadow: 0 15px 45px rgba(10, 79, 138, 0.1);">
+              <div class="about-img" style="border-radius: 20px; overflow: hidden; box-shadow: 0 15px 45px rgba(0, 128, 129, 0.1);">
                 <img src="assets/images/about/dog_goggles.png" alt="BOVICAN Veterinary Diagnostics" class="img-fluid" style="width: 100%; border-radius: 20px; transition: transform 0.5s ease;">
               </div>
             </div>
@@ -227,14 +227,14 @@
       }
       .bovicon-industry-card:hover {
         transform: translateY(-8px) !important;
-        box-shadow: 0 20px 40px rgba(10, 79, 138, 0.08) !important;
-        border-color: rgba(10, 79, 138, 0.2) !important;
+        box-shadow: 0 20px 40px rgba(0, 128, 129, 0.08) !important;
+        border-color: rgba(0, 128, 129, 0.2) !important;
       }
       .bovicon-industry-icon-box {
         width: 70px !important;
         height: 70px !important;
         border-radius: 50% !important;
-        background-color: rgba(10, 79, 138, 0.06) !important;
+        background-color: rgba(0, 128, 129, 0.06) !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -376,10 +376,10 @@
         color: #fff !important;
         margin-bottom: 25px !important;
         flex-shrink: 0 !important;
-        box-shadow: 0 8px 16px rgba(10, 79, 138, 0.2) !important;
+        box-shadow: 0 8px 16px rgba(0, 128, 129, 0.2) !important;
       }
       .bovicon-mv-card.card-secondary .bovicon-mv-icon-box {
-        box-shadow: 0 8px 16px rgba(255, 142, 37, 0.25) !important;
+        box-shadow: 0 8px 16px rgba(238, 115, 85, 0.25) !important;
       }
       .bovicon-mv-title {
         font-family: 'Lexend', sans-serif !important;
@@ -397,7 +397,7 @@
       }
     </style>
 
-    <section class="mission-vision-section pt-100 pb-100" style="background: linear-gradient(135deg, rgba(10, 79, 138, 0.95), rgba(5, 40, 70, 0.95)), url('assets/images/banners/7.jpg') no-repeat center center; background-size: cover; position: relative;">
+    <section class="mission-vision-section pt-100 pb-100" style="background: linear-gradient(135deg, rgba(0, 128, 129, 0.95), rgba(0, 60, 61, 0.95)), url('assets/images/banners/7.jpg') no-repeat center center; background-size: cover; position: relative;">
       <div class="container" style="position: relative; z-index: 2;">
         <div class="row">
           <div class="col-sm-12 col-md-6 mb-30">
@@ -453,14 +453,14 @@
                           <div class="bovicon-about-card card-primary" style="background: #ffffff; border-radius: 16px; padding: 40px 30px; height: 100%; min-height: 300px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02); border: 1px solid rgba(234, 234, 234, 0.8); transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1); display: flex; flex-direction: column; justify-content: space-between; border-top: 5px solid var(--color-primary);">
                             <div>
                               <div style="margin-bottom: 20px; text-align: left;">
-                                <i class="fas fa-quote-left" style="font-size: 32px; color: rgba(255, 142, 37, 0.2);"></i>
+                                <i class="fas fa-quote-left" style="font-size: 32px; color: rgba(238, 115, 85, 0.2);"></i>
                               </div>
                               <p style="font-family: 'Roboto', sans-serif; font-style: italic; color: #555; line-height: 1.6; font-size: 15px; margin-bottom: 25px; text-align: left;">
                                 "<?php echo htmlspecialchars($tRow['text']); ?>"
                               </p>
                             </div>
                             <div style="display: flex; align-items: center; border-top: 1px solid #edf2f7; padding-top: 20px; margin-top: auto;">
-                              <div style="width: 45px; height: 45px; border-radius: 50%; background-color: rgba(10, 79, 138, 0.1); color: var(--color-primary); font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0; border: 1px solid rgba(10, 79, 138, 0.2);">
+                              <div style="width: 45px; height: 45px; border-radius: 50%; background-color: rgba(0, 128, 129, 0.1); color: var(--color-primary); font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0; border: 1px solid rgba(0, 128, 129, 0.2);">
                                 <?php echo htmlspecialchars($tRow['avatar']); ?>
                               </div>
                               <div style="text-align: left;">

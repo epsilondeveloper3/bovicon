@@ -7,12 +7,12 @@
 
 <style>
   :root {
-    --color-primary: #0A4F8A !important;
-    --color-secondary: #FF8E25 !important;
-    --color-primary-rgb: 10, 79, 138 !important;
-    --color-secondary-rgb: 255, 142, 37 !important;
-    --bs-primary: #0A4F8A !important;
-    --bs-secondary: #FF8E25 !important;
+    --color-primary: #008081 !important;
+    --color-secondary: #ee7355 !important;
+    --color-primary-rgb: 0, 128, 129 !important;
+    --color-secondary-rgb: 238, 115, 85 !important;
+    --bs-primary: #008081 !important;
+    --bs-secondary: #ee7355 !important;
   }
 
   /* Make slider fully responsive and prevent vertical clipping on any screen size */
@@ -124,8 +124,8 @@
   }
   .bovicon-value-card:hover {
     transform: translateY(-6px) !important;
-    box-shadow: 0 20px 40px rgba(10, 79, 138, 0.06) !important;
-    border-color: rgba(10, 79, 138, 0.2) !important;
+    box-shadow: 0 20px 40px rgba(var(--color-primary-rgb), 0.06) !important;
+    border-color: rgba(var(--color-primary-rgb), 0.2) !important;
   }
   .bovicon-value-card .bovicon-value-icon {
     transition: all 0.3s ease !important;
@@ -168,6 +168,13 @@
     .col-lg-2-5 {
       flex: 0 0 100% !important;
       max-width: 100% !important;
-    }
+  }
+
+  /* Footer logo-wise color alignment overrides */
+  .footer .footer-primary {
+    background-color: #004041 !important; /* Premium Dark Teal matching logo primary color */
+  }
+  .footer .footer-secondary:after {
+    background-color: var(--color-secondary) !important; /* Premium Coral Orange matching logo secondary color */
   }
 </style>

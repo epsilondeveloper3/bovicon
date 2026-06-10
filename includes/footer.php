@@ -5,9 +5,11 @@
       <div class="footer-primary">
         <div class="container">
           <div class="row">
-            <div class="col-12 col-lg-3">
+             <div class="col-12 col-lg-3">
               <div class="footer-widget-about">
-                <img src="assets/images/logo/logo-light.png" alt="logo">
+                <div style="background-color: #ffffff; padding: 15px 20px; border-radius: 12px; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 20px;">
+                  <img src="assets/images/logo/logo-dark.png" alt="logo" style="max-height: 48px; width: auto; display: block;">
+                </div>
               </div><!-- /.footer-widget-about -->
             </div><!-- /.col-lg-3 -->
             <div class="col-6 col-lg-2">
@@ -53,14 +55,8 @@
                 <ul class="contact-list list-unstyled">
                   <li>
                     <p>Send Us Email:</p>
-                    <a href="/cdn-cgi/l/email-protection#93f0fbf6fefff2f1e0d3a4fce1fcfcf5bdf0fcfe">
-                      <i class="contact-icon icon-email"></i> <span><span class="__cf_email__" data-cfemail="fb98939e96979a9988bbcc948994949dd5989496">[email&#160;protected]</span></span>
-                    </a>
-                  </li>
-                  <li>
-                    <p>Call Us Today:</p>
-                    <a href="tel:00201061245741">
-                      <i class="contact-icon icon-phone"></i> <span>(002) 01061245741</span>
+                    <a href="mailto:info.bovicanvet@gmail.com">
+                      <i class="contact-icon icon-email"></i> <span>info.bovicanvet@gmail.com</span>
                     </a>
                   </li>
                 </ul>

@@ -62,7 +62,7 @@ $privacyContent = '
 <p>BOVICAN never sells, leases, or shares veterinary or contact data with third-party organizations for promotional or marketing campaigns. We only collaborate with laboratory networks to process specific specialized panels under strictly signed non-disclosure agreements.</p>
 
 <h4>6. Contact Us</h4>
-<p>If you have any questions, concerns, or requests regarding this policy or the privacy of your diagnostics data, feel free to email our help desk at <a href="mailto:janvikotecha3132@gmail.com" style="color: #FF8E25; font-weight: 700;">janvikotecha3132@gmail.com</a>.</p>
+<p>If you have any questions, concerns, or requests regarding this policy or the privacy of your diagnostics data, feel free to email our help desk at <a href="mailto:info.bovicanvet@gmail.com" style="color: #FF8E25; font-weight: 700;">info.bovicanvet@gmail.com</a>.</p>
 ';
 
 $slug = 'privacy-policy';

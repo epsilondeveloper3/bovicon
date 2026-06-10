@@ -127,7 +127,7 @@ $testimonialsRes = mysqli_query($con, "SELECT * FROM testimonials ORDER BY id DE
                                             <tr>
                                                 <td><?= $i++ ?></td>
                                                 <td>
-                                                    <div style="width: 38px; height: 38px; border-radius: 50%; background-color: rgba(10, 79, 138, 0.1); color: var(--color-primary); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(10, 79, 138, 0.2);">
+                                                    <div style="width: 38px; height: 38px; border-radius: 50%; background-color: rgba(0, 128, 129, 0.1); color: var(--color-primary); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(0, 128, 129, 0.2);">
                                                         <?= htmlspecialchars($row['avatar']) ?>
                                                     </div>
                                                 </td>

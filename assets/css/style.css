@@ -3957,7 +3957,7 @@ input[type=radio] {
 .footer .footer-primary {
   position: relative;
   padding: 123px 0 100px;
-  background-color: #011d59;
+  background-color: #ee7355;
 }
 .footer .footer-primary:after {
   content: "";
@@ -4008,7 +4008,7 @@ input[type=radio] {
   font-weight: 500;
   display: flex;
   align-items: center;
-  color: var(--color-secondary);
+  color: #fff;
 }
 .footer .contact-list li a .contact-icon {
   margin-right: 15px;

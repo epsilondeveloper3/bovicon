@@ -3,10 +3,10 @@
         <!-- Brand Logo -->
         <img src="img/core-img/logo.png" alt="BOVICAN Logo" style="max-width: 200px; height: auto; animation: pulse 1.8s infinite ease-in-out;">
         
-        <!-- Premium Pulsing Spinner with Sapphire Blue and Warm Orange -->
-        <div style="margin: 25px auto 0; width: 40px; height: 40px; border: 3px solid rgba(10, 79, 138, 0.1); border-radius: 50%; border-top-color: #0A4F8A; border-bottom-color: #FF8E25; animation: spin 1s ease-in-out infinite;"></div>
+        <!-- Premium Pulsing Spinner with Teal and Coral Orange -->
+        <div style="margin: 25px auto 0; width: 40px; height: 40px; border: 3px solid rgba(0, 128, 129, 0.1); border-radius: 50%; border-top-color: #008081; border-bottom-color: #ee7355; animation: spin 1s ease-in-out infinite;"></div>
         
-        <div style="margin-top: 15px; font-family: 'Lexend', sans-serif; font-weight: 700; color: #0A4F8A; font-size: 14px; letter-spacing: 1px; text-transform: uppercase;">
+        <div style="margin-top: 15px; font-family: 'Lexend', sans-serif; font-weight: 700; color: #008081; font-size: 14px; letter-spacing: 1px; text-transform: uppercase;">
             BOVICAN Admin
         </div>
     </div>

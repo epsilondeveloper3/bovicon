@@ -49,8 +49,8 @@
 
         /* BOVICAN Custom Premium Color Theme overrides */
         :root {
-            --color-primary: #0A4F8A; /* Sapphire Blue */
-            --color-secondary: #FF8E25; /* Warm Orange */
+            --color-primary: #008081; /* Teal */
+            --color-secondary: #ee7355; /* Coral Orange */
         }
 
         /* Sidebar Wrapper Background color */
@@ -60,7 +60,7 @@
         
         /* Logo Area Background color */
         .flapt-logo {
-            background-color: #073b67 !important; /* Slightly darker blue for contrast */
+            background-color: #006667 !important; /* Slightly darker teal for contrast */
             border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
         }
 
@@ -85,7 +85,7 @@
             background-color: var(--color-secondary) !important;
             border-left: 3px solid var(--color-secondary) !important;
             font-weight: 700 !important;
-            box-shadow: 0 4px 12px rgba(255, 142, 37, 0.2) !important;
+            box-shadow: 0 4px 12px rgba(238, 115, 85, 0.2) !important;
         }
 
         /* Sidebar icons color */
@@ -154,7 +154,7 @@
         .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
             background-color: var(--color-secondary) !important;
             border-color: var(--color-secondary) !important;
-            box-shadow: 0 4px 12px rgba(255, 142, 37, 0.2) !important;
+            box-shadow: 0 4px 12px rgba(238, 115, 85, 0.2) !important;
         }
 
         /* Green success buttons (like edit) */
@@ -203,7 +203,7 @@
         /* Focus state for form fields */
         .form-control:focus {
             border-color: var(--color-primary) !important;
-            box-shadow: 0 0 0 0.2rem rgba(10, 79, 138, 0.15) !important;
+            box-shadow: 0 0 0 0.2rem rgba(0, 128, 129, 0.15) !important;
         }
 
         /* Checkbox & radio button primary theme overrides */

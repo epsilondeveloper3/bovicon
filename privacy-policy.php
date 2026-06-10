@@ -13,7 +13,7 @@
     .privacy-card h4 {
       font-family: 'Lexend', sans-serif;
       font-weight: 700;
-      color: #0A4F8A;
+      color: var(--color-primary);
       margin-top: 30px;
       margin-bottom: 15px;
       font-size: 20px;
@@ -102,9 +102,9 @@
                     }
                 }
                 ?>
-                <h3 style="font-family: 'Lexend', sans-serif; font-weight: 700; color: #0A4F8A; font-size: 26px; margin-bottom: 10px;"><?php echo htmlspecialchars($pTitle); ?></h3>
+                <h3 style="font-family: 'Lexend', sans-serif; font-weight: 700; color: var(--color-primary); font-size: 26px; margin-bottom: 10px;"><?php echo htmlspecialchars($pTitle); ?></h3>
                 <p class="text-muted" style="font-size: 13px;">Last Updated: <?php echo $pUpdated; ?></p>
-                <div style="width: 50px; height: 3px; background-color: #FF8E25; margin-bottom: 30px; border-radius: 2px;"></div>
+                <div style="width: 50px; height: 3px; background-color: var(--color-secondary); margin-bottom: 30px; border-radius: 2px;"></div>
                 
                 <?php echo $pContent; ?>
               </div>
