@@ -1,5 +1,11 @@
 <?php
-define("HOST_URL", "http://localhost/Projects/bovicon/");
+if (isset($_SERVER['HTTP_HOST']) && ($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '127.0.0.1')) {
+    define("HOST_URL", "http://localhost/Projects/bovicon/");
+} else {
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) ? "https://" : "http://";
+    $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'bovican.epsilon-technology.com';
+    define("HOST_URL", $protocol . $host . "/");
+}
 define("WEB_TITLE", "Bovica");
 
 define("IMAGE_URL", HOST_URL . "assets/images/");

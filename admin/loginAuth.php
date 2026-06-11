@@ -9,7 +9,7 @@ if(isset($_POST['email']) && !empty($_POST['email']))
         $password = addslashes($_POST['pass']);  
 
         // Fetch the user record from the database
-        $result = $qm->getRecord("adminUser", "*", "email = '$emailname'");
+        $result = $qm->getRecord("adminuser", "*", "email = '$emailname'");
       
         if(mysqli_num_rows($result) > 0){
             $row = mysqli_fetch_array($result);
