@@ -3472,6 +3472,12 @@ input[type=radio] {
   .header .logo-dark,
   .header-transparent .logo-dark {
     display: inline-block;
+    /* Slightly larger logo and rounded corners */
+    max-height: 80px;
+    height: auto;
+    width: auto;
+    border-radius: 8px;
+    object-fit: contain;
   }
   .header .logo-light,
   .header-transparent .logo-light {

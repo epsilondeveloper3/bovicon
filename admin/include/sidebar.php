@@ -21,7 +21,7 @@ function activeClass($pages, $className = 'active')
   </div>
 
   <!-- Side Nav -->
-  <div class="flapt-sidenav" id="flaptSideNav" style="margin-top: 80px;">
+  <div class="flapt-sidenav" id="flaptSideNav" >
     <!-- Side Menu Area -->
     <div class="side-menu-area">
       <!-- Sidebar Menu -->
@@ -41,7 +41,7 @@ function activeClass($pages, $className = 'active')
           </li>
 
           <li class="<?php echo trim(activeClass('tests.php')); ?>">
-            <a href="tests.php"><i class='bx bx-flask'></i>
+            <a href="tests.php"><i class='bx bx-book'></i>
               <span>Tests</span>
             </a>
           </li>
@@ -73,6 +73,11 @@ function activeClass($pages, $className = 'active')
           <li class="<?php echo trim(activeClass('privacy-policy.php')); ?>">
             <a href="privacy-policy.php"><i class='bx bx-shield-quarter'></i>
               <span>Privacy Policy</span>
+            </a>
+          </li>
+          <li>
+            <a href="logout.php"><i class='bx bx-power-off'></i>
+              <span>Logout</span>
             </a>
           </li>
         </ul>

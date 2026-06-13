@@ -244,7 +244,8 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        min-height: 400px;
+        /* Allow card height to collapse to content so there's no large empty space */
+        min-height: 0;
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.015);
       }
@@ -330,18 +331,22 @@
         left: 10px;
       }
       .test-card-footer {
-        margin-top: auto;
+        /* Reduce spacing above the button to make footer closer to content */
+        margin-top: 12px;
         border-top: 1px solid #f2f2f2;
-        padding-top: 18px;
+        padding-top: 10px;
         width: 100%;
       }
+      /* Prices hidden as requested */
       .price-lbl {
+        display: none !important;
         font-family: 'Lexend', sans-serif;
         font-size: 22px;
         font-weight: 700;
         color: #2e7d32;
       }
       .price-val {
+        display: none !important;
         margin-left: 4px;
       }
       .btn-book-now {
@@ -513,7 +518,7 @@
                 <?php foreach ($cat_counts as $cat => $count): ?>
                   <li class="<?php echo ($selected_category == $cat) ? 'active' : ''; ?>">
                     <a href="tests.php?category=<?php echo urlencode($cat) . ($search_query !== '' ? '&search=' . urlencode($search_query) : ''); ?>">
-                      <i class="fas fa-chevron-right list-icon"></i> <?php echo htmlspecialchars($cat); ?>
+                      <i class="fas fa-book list-icon"></i> <?php echo htmlspecialchars($cat); ?>
                       <span class="badge badge-count ml-auto"><?php echo $count; ?></span>
                     </a>
                   </li>
@@ -700,6 +705,7 @@
                 }
             });
         });
+
     });
     </script>
 

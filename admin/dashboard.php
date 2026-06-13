@@ -61,7 +61,7 @@
                       <div class="card-body">
                         <div class="single-widget d-flex align-items-center justify-content-between">
                           <div>
-                            <div class="widget-icon bg-primary text-white mb-2" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                            <div class="widget-icon  text-white mb-2" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
                               <i class="bx bx-briefcase font-24"></i>
                             </div>
                             <div class="widget-desc">
@@ -79,8 +79,8 @@
                       <div class="card-body">
                         <div class="single-widget d-flex align-items-center justify-content-between">
                           <div>
-                            <div class="widget-icon bg-success text-white mb-2" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
-                              <i class="bx bx-flask font-24"></i>
+                            <div class="widget-icon text-white mb-2" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                              <i class="bx bx-book font-24"></i>
                             </div>
                             <div class="widget-desc">
                               <h4 class="mb-1"><?php echo $testsCount; ?></h4>
