@@ -772,12 +772,16 @@
               <input type="text" class="form-control" name="contact-name" id="modal-contact-name" required placeholder="Enter your full name" style="height: 48px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 14px; padding: 10px 15px; width: 100%; display: block; background: #fff; box-sizing: border-box;">
             </div>
             <div style="margin-bottom: 18px;">
-              <label for="modal-contact-email" style="font-weight: 700; color: #555; font-size: 13px; margin-bottom: 6px; display: block;">Email Address *</label>
-              <input type="email" class="form-control" name="contact-email" id="modal-contact-email" required placeholder="your.email@example.com" style="height: 48px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 14px; padding: 10px 15px; width: 100%; display: block; background: #fff; box-sizing: border-box;">
+              <label for="modal-contact-city" style="font-weight: 700; color: #555; font-size: 13px; margin-bottom: 6px; display: block;">City *</label>
+              <input type="text" class="form-control" name="contact-city" id="modal-contact-city" required placeholder="Enter your city" style="height: 48px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 14px; padding: 10px 15px; width: 100%; display: block; background: #fff; box-sizing: border-box;">
             </div>
             <div style="margin-bottom: 18px;">
               <label for="modal-contact-phone" style="font-weight: 700; color: #555; font-size: 13px; margin-bottom: 6px; display: block;">Phone Number *</label>
               <input type="text" class="form-control" name="contact-phone" id="modal-contact-phone" required placeholder="e.g., +91 98765 43210" style="height: 48px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 14px; padding: 10px 15px; width: 100%; display: block; background: #fff; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 18px;">
+              <label for="modal-contact-doctor" style="font-weight: 700; color: #555; font-size: 13px; margin-bottom: 6px; display: block;">Reference Doctor Name</label>
+              <input type="text" class="form-control" name="contact-doctor" id="modal-contact-doctor" placeholder="Enter reference doctor name (optional)" style="height: 48px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 14px; padding: 10px 15px; width: 100%; display: block; background: #fff; box-sizing: border-box;">
             </div>
             <div style="margin-bottom: 0;">
               <label for="modal-contact-message" style="font-weight: 700; color: #555; font-size: 13px; margin-bottom: 6px; display: block;">Additional Details / Address</label>

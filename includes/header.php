@@ -80,6 +80,10 @@
           <a class="navbar-brand" href="index.php">
             <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
           </a>
+          <!-- Call Us Button for Mobile -->
+          <a href="tel:9638249696" class="btn btn-secondary d-inline-flex d-xl-none align-items-center justify-content-center mobile-call-btn" style="width: 42px !important; height: 42px !important; min-width: auto !important; border-radius: 50% !important; padding: 0 !important; background-color: var(--color-secondary) !important; border: none !important; color: white !important; position: absolute; right: 65px; top: 50%; transform: translateY(-50%); z-index: 10;">
+            <i class="fas fa-phone-alt"></i>
+          </a>
           <button class="navbar-toggler" type="button">
             <span class="menu-lines"><span></span></span>
           </button>
@@ -101,6 +105,9 @@
             <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
           </div><!-- /.navbar-collapse -->
           <div class="d-none d-xl-flex align-items-center position-relative ml-30">
+            <a href="tel:9638249696" class="btn btn-secondary btn-contact" style="margin-right: 15px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+              <i class="fas fa-phone-alt"></i> Call Us: 9638249696
+            </a>
             <a href="tests.php" class="btn btn-primary btn-contact">
               Book a Test
             </a>

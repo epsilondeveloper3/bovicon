@@ -9,7 +9,7 @@ if (!$con) {
 $query = "CREATE TABLE IF NOT EXISTS inquiries (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
+    email VARCHAR(255) DEFAULT NULL,
     phone VARCHAR(50) NOT NULL,
     message TEXT,
     test_name VARCHAR(255) DEFAULT NULL,

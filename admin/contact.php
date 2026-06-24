@@ -147,9 +147,19 @@ $inquiryRes = mysqli_query($con, "SELECT * FROM inquiries ORDER BY id DESC");
                                             ?>
                                                 <tr>
                                                     <td><?= $i++ ?></td>
-                                                    <td class="text-start fw-bold"><?= htmlspecialchars($row['name']) ?></td>
+                                                    <td class="text-start fw-bold">
+                                                        <?= htmlspecialchars($row['name']) ?>
+                                                        <?php if (!empty($row['doctor_name'])): ?>
+                                                            <div class="text-muted font-11 fw-normal mt-1" style="font-size: 11px;"><i class="bx bx-user-voice text-secondary"></i> Ref: Dr. <?= htmlspecialchars($row['doctor_name']) ?></div>
+                                                        <?php endif; ?>
+                                                    </td>
                                                     <td class="text-start contact-details">
-                                                        <p><i class="bx bx-envelope text-primary"></i> <a href="mailto:<?= htmlspecialchars($row['email']) ?>"><?= htmlspecialchars($row['email']) ?></a></p>
+                                                        <?php if (!empty($row['email'])): ?>
+                                                            <p><i class="bx bx-envelope text-primary"></i> <a href="mailto:<?= htmlspecialchars($row['email']) ?>"><?= htmlspecialchars($row['email']) ?></a></p>
+                                                        <?php endif; ?>
+                                                        <?php if (!empty($row['city'])): ?>
+                                                            <p><i class="bx bx-map text-warning"></i> <span><?= htmlspecialchars($row['city']) ?></span></p>
+                                                        <?php endif; ?>
                                                         <p><i class="bx bx-phone text-success"></i> <a href="tel:<?= htmlspecialchars($row['phone']) ?>"><?= htmlspecialchars($row['phone']) ?></a></p>
                                                     </td>
                                                     <td>
@@ -165,21 +175,23 @@ $inquiryRes = mysqli_query($con, "SELECT * FROM inquiries ORDER BY id DESC");
                                                     <td class="text-start">
                                                         <?php if (!empty($msgRaw)) { ?>
                                                             <span class="msg-preview text-muted"><?= htmlspecialchars(mb_strimwidth($msgRaw, 0, 50, '...')) ?></span>
-                                                            <button class="btn btn-outline-primary btn-sm ms-1 py-0 px-2" 
-                                                                    onclick="viewInquiryDetail(
-                                                                        '<?= htmlspecialchars($row['name'], ENT_QUOTES) ?>',
-                                                                        '<?= htmlspecialchars($row['email'], ENT_QUOTES) ?>',
-                                                                        '<?= htmlspecialchars($row['phone'], ENT_QUOTES) ?>',
-                                                                        '<?= $row['type'] ?>',
-                                                                        '<?= htmlspecialchars($testName, ENT_QUOTES) ?>',
-                                                                        `<?= $msgEscaped ?>`,
-                                                                        '<?= formatDate($row['created_at']) ?>'
-                                                                    )">
-                                                                <i class="bx bx-show-alt"></i>
-                                                            </button>
                                                         <?php } else { ?>
                                                             <span class="text-muted">No message</span>
                                                         <?php } ?>
+                                                        <button class="btn btn-outline-primary btn-sm ms-1 py-0 px-2" 
+                                                                onclick="viewInquiryDetail(
+                                                                    '<?= htmlspecialchars($row['name'], ENT_QUOTES) ?>',
+                                                                    '<?= htmlspecialchars($row['email'] ?? '', ENT_QUOTES) ?>',
+                                                                    '<?= htmlspecialchars($row['phone'], ENT_QUOTES) ?>',
+                                                                    '<?= $row['type'] ?>',
+                                                                    '<?= htmlspecialchars($testName, ENT_QUOTES) ?>',
+                                                                    `<?= $msgEscaped ?>`,
+                                                                    '<?= formatDate($row['created_at']) ?>',
+                                                                    '<?= htmlspecialchars($row['city'] ?? '', ENT_QUOTES) ?>',
+                                                                    '<?= htmlspecialchars($row['doctor_name'] ?? '', ENT_QUOTES) ?>'
+                                                                )">
+                                                            <i class="bx bx-show-alt"></i>
+                                                        </button>
                                                     </td>
                                                     <td><?= formatDate($row['created_at']) ?></td>
                                                     <td>
@@ -235,13 +247,21 @@ $inquiryRes = mysqli_query($con, "SELECT * FROM inquiries ORDER BY id DESC");
                             <p class="fs-6 mb-3" id="modalSubDate"></p>
                         </div>
                         <hr class="mt-0">
-                        <div class="col-md-6">
+                        <div class="col-md-6" id="modalEmailContainer">
                             <label class="form-label text-muted mb-0">Email Address</label>
                             <p class="mb-3"><i class="bx bx-envelope me-1 text-primary"></i><a href="" id="modalCustEmail"></a></p>
+                        </div>
+                        <div class="col-md-6" id="modalCityContainer">
+                            <label class="form-label text-muted mb-0">City</label>
+                            <p class="mb-3"><i class="bx bx-map me-1 text-warning"></i><span id="modalCustCity"></span></p>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label text-muted mb-0">Phone Number</label>
                             <p class="mb-3"><i class="bx bx-phone me-1 text-success"></i><a href="" id="modalCustPhone"></a></p>
+                        </div>
+                        <div class="col-md-6" id="modalDoctorContainer">
+                            <label class="form-label text-muted mb-0">Reference Doctor Name</label>
+                            <p class="mb-3"><i class="bx bx-user me-1 text-info"></i><span id="modalCustDoctor"></span></p>
                         </div>
                         <hr class="mt-0">
                         <div class="col-md-6">
@@ -273,10 +293,33 @@ $inquiryRes = mysqli_query($con, "SELECT * FROM inquiries ORDER BY id DESC");
     <?php include('include/footer-script.php') ?>
 
     <script>
-        function viewInquiryDetail(name, email, phone, type, testName, message, date) {
+        function viewInquiryDetail(name, email, phone, type, testName, message, date, city, doctorName) {
             $("#modalCustName").text(name);
             $("#modalSubDate").text(date);
-            $("#modalCustEmail").text(email).attr("href", "mailto:" + email);
+            
+            if (email && email.trim() !== '') {
+                $("#modalEmailContainer").show();
+                $("#modalCustEmail").text(email).attr("href", "mailto:" + email);
+                $("#modalReplyBtn").show().attr("href", "mailto:" + email + "?subject=Re: BOVICAN Inquiry");
+            } else {
+                $("#modalEmailContainer").hide();
+                $("#modalReplyBtn").hide();
+            }
+            
+            if (city && city.trim() !== '') {
+                $("#modalCityContainer").show();
+                $("#modalCustCity").text(city);
+            } else {
+                $("#modalCityContainer").hide();
+            }
+            
+            if (doctorName && doctorName.trim() !== '') {
+                $("#modalDoctorContainer").show();
+                $("#modalCustDoctor").text(doctorName);
+            } else {
+                $("#modalDoctorContainer").hide();
+            }
+            
             $("#modalCustPhone").text(phone).attr("href", "tel:" + phone);
             
             // Set type badge
@@ -292,9 +335,6 @@ $inquiryRes = mysqli_query($con, "SELECT * FROM inquiries ORDER BY id DESC");
             }
             
             $("#modalCustMessage").text(message || 'No message provided.');
-            
-            // Set reply button link
-            $("#modalReplyBtn").attr("href", "mailto:" + email + "?subject=Re: BOVICAN Inquiry");
             
             // Show modal
             var modal = new bootstrap.Modal(document.getElementById('inquiryDetailModal'));

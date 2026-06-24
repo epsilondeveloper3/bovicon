@@ -124,4 +124,25 @@ INSERT INTO `tests` (`id`, `name`, `preparation`, `frequency`, `parameter_count`
 (4, 'TLC ( TOTAL LEUCOCYTE COUNT)', 'No special preparation required', 'Daily', 1, 'Total Leucocyte Count', '200.00')
 ON DUPLICATE KEY UPDATE `name`=VALUES(`name`), `preparation`=VALUES(`preparation`), `frequency`=VALUES(`frequency`), `parameter_count`=VALUES(`parameter_count`), `parameters`=VALUES(`parameters`), `price`=VALUES(`price`);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `inquiries`
+--
+
+CREATE TABLE IF NOT EXISTS `inquiries` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `doctor_name` varchar(255) DEFAULT NULL,
+  `phone` varchar(50) NOT NULL,
+  `message` text DEFAULT NULL,
+  `test_name` varchar(255) DEFAULT NULL,
+  `type` varchar(50) DEFAULT 'contact',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 COMMIT;
+
