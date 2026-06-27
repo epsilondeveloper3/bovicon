@@ -776,6 +776,14 @@
               <input type="text" class="form-control" name="contact-city" id="modal-contact-city" required placeholder="Enter your city" style="height: 48px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 14px; padding: 10px 15px; width: 100%; display: block; background: #fff; box-sizing: border-box;">
             </div>
             <div style="margin-bottom: 18px;">
+              <label for="modal-contact-species" style="font-weight: 700; color: #555; font-size: 13px; margin-bottom: 6px; display: block;">Species *</label>
+              <input type="text" class="form-control" name="contact-species" id="modal-contact-species" required placeholder="e.g., Cow, Buffalo" style="height: 48px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 14px; padding: 10px 15px; width: 100%; display: block; background: #fff; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 18px;">
+              <label for="modal-contact-breed" style="font-weight: 700; color: #555; font-size: 13px; margin-bottom: 6px; display: block;">Breed *</label>
+              <input type="text" class="form-control" name="contact-breed" id="modal-contact-breed" required placeholder="e.g., Gir, Jaffrabadi, HF" style="height: 48px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 14px; padding: 10px 15px; width: 100%; display: block; background: #fff; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 18px;">
               <label for="modal-contact-phone" style="font-weight: 700; color: #555; font-size: 13px; margin-bottom: 6px; display: block;">Phone Number *</label>
               <input type="text" class="form-control" name="contact-phone" id="modal-contact-phone" required placeholder="e.g., +91 98765 43210" style="height: 48px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 14px; padding: 10px 15px; width: 100%; display: block; background: #fff; box-sizing: border-box;">
             </div>

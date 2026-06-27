@@ -6,6 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = mysqli_real_escape_string($con, trim($_POST['contact-phone'] ?? ''));
     $message = mysqli_real_escape_string($con, trim($_POST['contact-message'] ?? ''));
     $test_name = mysqli_real_escape_string($con, trim($_POST['contact-test'] ?? ''));
+    $species = mysqli_real_escape_string($con, trim($_POST['contact-species'] ?? ''));
+    $breed = mysqli_real_escape_string($con, trim($_POST['contact-breed'] ?? ''));
 
     $city = '';
     $doctor_name = '';
@@ -16,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $city = mysqli_real_escape_string($con, trim($_POST['contact-city'] ?? ''));
         $doctor_name = mysqli_real_escape_string($con, trim($_POST['contact-doctor'] ?? ''));
         
-        if ($name === '' || $city === '' || $phone === '') {
+        if ($name === '' || $city === '' || $phone === '' || $species === '' || $breed === '') {
             header("Location: tests.php?error=empty_fields");
             exit;
         }
@@ -37,8 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert into database
-    $query = "INSERT INTO inquiries (name, email, city, doctor_name, phone, message, test_name, type) 
-              VALUES ('$name', " . ($email !== '' ? "'$email'" : "NULL") . ", " . ($city !== '' ? "'$city'" : "NULL") . ", " . ($doctor_name !== '' ? "'$doctor_name'" : "NULL") . ", '$phone', '$message', " . ($test_name !== '' ? "'$test_name'" : "NULL") . ", '$type')";
+    $query = "INSERT INTO inquiries (name, email, city, doctor_name, species, breed, phone, message, test_name, type) 
+              VALUES ('$name', " . ($email !== '' ? "'$email'" : "NULL") . ", " . ($city !== '' ? "'$city'" : "NULL") . ", " . ($doctor_name !== '' ? "'$doctor_name'" : "NULL") . ", " . ($species !== '' ? "'$species'" : "NULL") . ", " . ($breed !== '' ? "'$breed'" : "NULL") . ", '$phone', '$message', " . ($test_name !== '' ? "'$test_name'" : "NULL") . ", '$type')";
     
     $inserted = mysqli_query($con, $query);
 
@@ -60,6 +62,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($type === 'booking') {
         $body .= "Type: Test Booking\n";
         $body .= "Test Name: " . stripslashes($test_name) . "\n";
+        if ($species !== '') {
+            $body .= "Species: " . stripslashes($species) . "\n";
+        }
+        if ($breed !== '') {
+            $body .= "Breed: " . stripslashes($breed) . "\n";
+        }
         if ($doctor_name !== '') {
             $body .= "Reference Doctor Name: " . stripslashes($doctor_name) . "\n";
         }
@@ -85,6 +93,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $wa_city = $city;
             $wa_doc = $doctor_name;
             $wa_detail = $test_name;
+            if ($species !== '') {
+                $wa_detail .= " | Species: " . $species;
+            }
+            if ($breed !== '') {
+                $wa_detail .= " | Breed: " . $breed;
+            }
             if ($message !== '') {
                 $wa_detail .= " | " . $message;
             }

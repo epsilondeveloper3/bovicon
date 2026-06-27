@@ -149,6 +149,13 @@ $inquiryRes = mysqli_query($con, "SELECT * FROM inquiries ORDER BY id DESC");
                                                     <td><?= $i++ ?></td>
                                                     <td class="text-start fw-bold">
                                                         <?= htmlspecialchars($row['name']) ?>
+                                                        <?php if (!empty($row['species']) || !empty($row['breed'])): ?>
+                                                            <div class="text-secondary font-11 fw-normal mt-1" style="font-size: 11.5px;">
+                                                                <i class="bx bx-dna text-info"></i> 
+                                                                <?= htmlspecialchars($row['species'] ?? '') ?> 
+                                                                <?= !empty($row['breed']) ? '(' . htmlspecialchars($row['breed']) . ')' : '' ?>
+                                                            </div>
+                                                        <?php endif; ?>
                                                         <?php if (!empty($row['doctor_name'])): ?>
                                                             <div class="text-muted font-11 fw-normal mt-1" style="font-size: 11px;"><i class="bx bx-user-voice text-secondary"></i> Ref: Dr. <?= htmlspecialchars($row['doctor_name']) ?></div>
                                                         <?php endif; ?>
@@ -188,7 +195,9 @@ $inquiryRes = mysqli_query($con, "SELECT * FROM inquiries ORDER BY id DESC");
                                                                     `<?= $msgEscaped ?>`,
                                                                     '<?= formatDate($row['created_at']) ?>',
                                                                     '<?= htmlspecialchars($row['city'] ?? '', ENT_QUOTES) ?>',
-                                                                    '<?= htmlspecialchars($row['doctor_name'] ?? '', ENT_QUOTES) ?>'
+                                                                    '<?= htmlspecialchars($row['doctor_name'] ?? '', ENT_QUOTES) ?>',
+                                                                    '<?= htmlspecialchars($row['species'] ?? '', ENT_QUOTES) ?>',
+                                                                    '<?= htmlspecialchars($row['breed'] ?? '', ENT_QUOTES) ?>'
                                                                 )">
                                                             <i class="bx bx-show-alt"></i>
                                                         </button>
@@ -263,6 +272,14 @@ $inquiryRes = mysqli_query($con, "SELECT * FROM inquiries ORDER BY id DESC");
                             <label class="form-label text-muted mb-0">Reference Doctor Name</label>
                             <p class="mb-3"><i class="bx bx-user me-1 text-info"></i><span id="modalCustDoctor"></span></p>
                         </div>
+                        <div class="col-md-6" id="modalSpeciesContainer">
+                            <label class="form-label text-muted mb-0">Species</label>
+                            <p class="mb-3"><i class="bx bx-dna me-1 text-danger"></i><span id="modalCustSpecies"></span></p>
+                        </div>
+                        <div class="col-md-6" id="modalBreedContainer">
+                            <label class="form-label text-muted mb-0">Breed</label>
+                            <p class="mb-3"><i class="bx bx-purchase-tag me-1 text-success"></i><span id="modalCustBreed"></span></p>
+                        </div>
                         <hr class="mt-0">
                         <div class="col-md-6">
                             <label class="form-label text-muted mb-0">Inquiry Type</label>
@@ -293,7 +310,7 @@ $inquiryRes = mysqli_query($con, "SELECT * FROM inquiries ORDER BY id DESC");
     <?php include('include/footer-script.php') ?>
 
     <script>
-        function viewInquiryDetail(name, email, phone, type, testName, message, date, city, doctorName) {
+        function viewInquiryDetail(name, email, phone, type, testName, message, date, city, doctorName, species, breed) {
             $("#modalCustName").text(name);
             $("#modalSubDate").text(date);
             
@@ -318,6 +335,20 @@ $inquiryRes = mysqli_query($con, "SELECT * FROM inquiries ORDER BY id DESC");
                 $("#modalCustDoctor").text(doctorName);
             } else {
                 $("#modalDoctorContainer").hide();
+            }
+
+            if (species && species.trim() !== '') {
+                $("#modalSpeciesContainer").show();
+                $("#modalCustSpecies").text(species);
+            } else {
+                $("#modalSpeciesContainer").hide();
+            }
+
+            if (breed && breed.trim() !== '') {
+                $("#modalBreedContainer").show();
+                $("#modalCustBreed").text(breed);
+            } else {
+                $("#modalBreedContainer").hide();
             }
             
             $("#modalCustPhone").text(phone).attr("href", "tel:" + phone);
