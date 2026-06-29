@@ -90,21 +90,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Send WhatsApp Notification
         include_once 'includes/whatsapp_helper.php';
         if ($type === 'booking') {
-            $wa_city = $city;
-            $wa_doc = $doctor_name;
-            $wa_detail = $test_name;
-            if ($species !== '') {
-                $wa_detail .= " | Species: " . $species;
-            }
-            if ($breed !== '') {
-                $wa_detail .= " | Breed: " . $breed;
-            }
+            $wa_detail = "Test: " . $test_name;
             if ($message !== '') {
-                $wa_detail .= " | " . $message;
+                $wa_detail .= " | Addr/Msg: " . $message;
             }
+            send_whatsapp_inquiry($name, $city, $species, $breed, $phone, $doctor_name, $wa_detail);
         } else {
-            $wa_city = 'N/A';
-            $wa_doc = 'N/A';
             $wa_detail = "General Contact / Demo";
             if ($email !== '') {
                 $wa_detail .= " | Email: " . $email;
@@ -112,8 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($message !== '') {
                 $wa_detail .= " | Msg: " . $message;
             }
+            send_whatsapp_inquiry($name, 'N/A', 'N/A', 'N/A', $phone, 'N/A', $wa_detail);
         }
-        send_whatsapp_inquiry($name, $wa_city, $phone, $wa_doc, $wa_detail);
 
         $redir = ($type === 'booking') ? 'tests.php' : 'contact-us.php';
         header("Location: $redir?success=1");
